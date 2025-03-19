@@ -3,9 +3,9 @@
 //
 // Code generated for Simulink model 'multiModeQuad_ROS'.
 //
-// Model version                  : 1.67
+// Model version                  : 1.71
 // Simulink Coder version         : 9.6 (R2021b) 14-May-2021
-// C/C++ source code generated on : Wed Mar 19 11:44:06 2025
+// C/C++ source code generated on : Thu Mar 20 00:46:27 2025
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -18,182 +18,182 @@
 // Block parameters (default storage)
 P_multiModeQuad_ROS_T multiModeQuad_ROS_P = {
   // Mask Parameter: PIDVelocityx_D
-  //  Referenced by: '<S115>/Derivative Gain'
+  //  Referenced by: '<S116>/Derivative Gain'
 
   0.01,
 
   // Mask Parameter: PIDVelocityy_D
-  //  Referenced by: '<S163>/Derivative Gain'
+  //  Referenced by: '<S164>/Derivative Gain'
 
   0.01,
 
   // Mask Parameter: PIDangularroll_D
-  //  Referenced by: '<S355>/Derivative Gain'
+  //  Referenced by: '<S356>/Derivative Gain'
 
   0.05,
 
   // Mask Parameter: PIDangularpitch_D
-  //  Referenced by: '<S307>/Derivative Gain'
+  //  Referenced by: '<S308>/Derivative Gain'
 
   0.05,
 
   // Mask Parameter: PIDangulayaw_D
-  //  Referenced by: '<S259>/Derivative Gain'
+  //  Referenced by: '<S260>/Derivative Gain'
 
   0.04,
 
   // Mask Parameter: PIDVelocityz_D
-  //  Referenced by: '<S211>/Derivative Gain'
+  //  Referenced by: '<S212>/Derivative Gain'
 
   2.0,
 
   // Mask Parameter: PIDangulayaw_I
-  //  Referenced by: '<S262>/Integral Gain'
+  //  Referenced by: '<S263>/Integral Gain'
 
   0.05,
 
   // Mask Parameter: PIDangularpitch_I
-  //  Referenced by: '<S310>/Integral Gain'
+  //  Referenced by: '<S311>/Integral Gain'
 
   0.05,
 
   // Mask Parameter: PIDangularroll_I
-  //  Referenced by: '<S358>/Integral Gain'
+  //  Referenced by: '<S359>/Integral Gain'
 
   0.05,
 
   // Mask Parameter: PIDVelocityx_I
-  //  Referenced by: '<S118>/Integral Gain'
+  //  Referenced by: '<S119>/Integral Gain'
 
   0.0,
 
   // Mask Parameter: PIDVelocityy_I
-  //  Referenced by: '<S166>/Integral Gain'
+  //  Referenced by: '<S167>/Integral Gain'
 
   0.02,
 
   // Mask Parameter: PIDVelocityz_I
-  //  Referenced by: '<S214>/Integral Gain'
+  //  Referenced by: '<S215>/Integral Gain'
 
   0.2,
 
   // Mask Parameter: PIDVelocityx_InitialConditionFo
-  //  Referenced by: '<S116>/Filter'
+  //  Referenced by: '<S117>/Filter'
 
   0.0,
 
   // Mask Parameter: PIDVelocityy_InitialConditionFo
-  //  Referenced by: '<S164>/Filter'
+  //  Referenced by: '<S165>/Filter'
 
   0.0,
 
   // Mask Parameter: PIDangularroll_InitialCondition
-  //  Referenced by: '<S356>/Filter'
+  //  Referenced by: '<S357>/Filter'
 
   0.0,
 
   // Mask Parameter: PIDangularpitch_InitialConditio
-  //  Referenced by: '<S308>/Filter'
+  //  Referenced by: '<S309>/Filter'
 
   0.0,
 
   // Mask Parameter: PIDangulayaw_InitialConditionFo
-  //  Referenced by: '<S260>/Filter'
+  //  Referenced by: '<S261>/Filter'
 
   0.0,
 
   // Mask Parameter: PIDVelocityz_InitialConditionFo
-  //  Referenced by: '<S212>/Filter'
+  //  Referenced by: '<S213>/Filter'
 
   0.0,
 
   // Mask Parameter: PIDVelocityx_InitialCondition_o
-  //  Referenced by: '<S121>/Integrator'
+  //  Referenced by: '<S122>/Integrator'
 
   0.0,
 
   // Mask Parameter: PIDVelocityy_InitialCondition_i
-  //  Referenced by: '<S169>/Integrator'
+  //  Referenced by: '<S170>/Integrator'
 
   0.0,
 
   // Mask Parameter: PIDangularroll_InitialConditi_o
-  //  Referenced by: '<S361>/Integrator'
+  //  Referenced by: '<S362>/Integrator'
 
   0.0,
 
   // Mask Parameter: PIDangularpitch_InitialCondit_b
-  //  Referenced by: '<S313>/Integrator'
+  //  Referenced by: '<S314>/Integrator'
 
   0.0,
 
   // Mask Parameter: PIDangulayaw_InitialCondition_m
-  //  Referenced by: '<S265>/Integrator'
+  //  Referenced by: '<S266>/Integrator'
 
   0.0,
 
   // Mask Parameter: PIDVelocityz_InitialCondition_g
-  //  Referenced by: '<S217>/Integrator'
+  //  Referenced by: '<S218>/Integrator'
 
   0.0,
 
   // Mask Parameter: PIDVelocityx_N
-  //  Referenced by: '<S124>/Filter Coefficient'
+  //  Referenced by: '<S125>/Filter Coefficient'
 
   100.0,
 
   // Mask Parameter: PIDVelocityy_N
-  //  Referenced by: '<S172>/Filter Coefficient'
+  //  Referenced by: '<S173>/Filter Coefficient'
 
   100.0,
 
   // Mask Parameter: PIDangularroll_N
-  //  Referenced by: '<S364>/Filter Coefficient'
+  //  Referenced by: '<S365>/Filter Coefficient'
 
   300.0,
 
   // Mask Parameter: PIDangularpitch_N
-  //  Referenced by: '<S316>/Filter Coefficient'
+  //  Referenced by: '<S317>/Filter Coefficient'
 
   300.0,
 
   // Mask Parameter: PIDangulayaw_N
-  //  Referenced by: '<S268>/Filter Coefficient'
+  //  Referenced by: '<S269>/Filter Coefficient'
 
   300.0,
 
   // Mask Parameter: PIDVelocityz_N
-  //  Referenced by: '<S220>/Filter Coefficient'
+  //  Referenced by: '<S221>/Filter Coefficient'
 
   100.0,
 
   // Mask Parameter: PIDVelocityx_P
-  //  Referenced by: '<S126>/Proportional Gain'
+  //  Referenced by: '<S127>/Proportional Gain'
 
   3.0,
 
   // Mask Parameter: PIDVelocityy_P
-  //  Referenced by: '<S174>/Proportional Gain'
+  //  Referenced by: '<S175>/Proportional Gain'
 
   3.0,
 
   // Mask Parameter: PIDangularroll_P
-  //  Referenced by: '<S359>/Proportional Gain'
+  //  Referenced by: '<S360>/Proportional Gain'
 
   0.6,
 
   // Mask Parameter: PIDangularpitch_P
-  //  Referenced by: '<S311>/Proportional Gain'
+  //  Referenced by: '<S312>/Proportional Gain'
 
   0.6,
 
   // Mask Parameter: PIDangulayaw_P
-  //  Referenced by: '<S263>/Proportional Gain'
+  //  Referenced by: '<S264>/Proportional Gain'
 
   1.0,
 
   // Mask Parameter: PIDVelocityz_P
-  //  Referenced by: '<S222>/Proportional Gain'
+  //  Referenced by: '<S223>/Proportional Gain'
 
   3.0,
 
@@ -204,24 +204,24 @@ P_multiModeQuad_ROS_T multiModeQuad_ROS_P = {
 
   // Mask Parameter: DirectionCosineMatrixtoQuaterni
   //  Referenced by:
-  //    '<S54>/Constant'
-  //    '<S79>/Constant'
+  //    '<S55>/Constant'
   //    '<S80>/Constant'
+  //    '<S81>/Constant'
 
   1.0,
 
   // Mask Parameter: uDOFEulerAngles2_eul_0
-  //  Referenced by: '<S34>/phi theta psi'
+  //  Referenced by: '<S35>/phi theta psi'
 
   { 0.0, 0.0, 0.0 },
 
   // Mask Parameter: uDOFEulerAngles2_inertia
-  //  Referenced by: '<S36>/Constant1'
+  //  Referenced by: '<S37>/Constant1'
 
   { 0.015, 0.0, 0.0, 0.0, 0.015, 0.0, 0.0, 0.0, 0.03 },
 
   // Mask Parameter: uDOFEulerAngles2_mass_0
-  //  Referenced by: '<S36>/Constant'
+  //  Referenced by: '<S37>/Constant'
 
   2.0,
 
@@ -232,8 +232,8 @@ P_multiModeQuad_ROS_T multiModeQuad_ROS_P = {
 
   // Mask Parameter: DirectionCosineMatrixtoQuater_h
   //  Referenced by:
-  //    '<S87>/Constant'
-  //    '<S89>/Constant'
+  //    '<S88>/Constant'
+  //    '<S90>/Constant'
 
   4.4408920985006262E-16,
 
@@ -589,67 +589,32 @@ P_multiModeQuad_ROS_T multiModeQuad_ROS_P = {
   },
 
   // Expression: 1
-  //  Referenced by: '<S53>/Constant'
+  //  Referenced by: '<S54>/Constant'
 
   1.0,
 
   // Expression: 0.5
-  //  Referenced by: '<S53>/Gain'
+  //  Referenced by: '<S54>/Gain'
 
   0.5,
 
   // Expression: 2
-  //  Referenced by: '<S53>/Gain1'
+  //  Referenced by: '<S54>/Gain1'
 
   2.0,
 
   // Expression: 1
-  //  Referenced by: '<S69>/Constant'
+  //  Referenced by: '<S70>/Constant'
 
   1.0,
 
   // Expression: 0.5
-  //  Referenced by: '<S68>/Constant1'
+  //  Referenced by: '<S69>/Constant1'
 
   0.5,
 
   // Expression: [0 1]
-  //  Referenced by: '<S68>/Constant2'
-
-  { 0.0, 1.0 },
-
-  // Expression: 1
-  //  Referenced by: '<S57>/Gain1'
-
-  1.0,
-
-  // Expression: 1
-  //  Referenced by: '<S57>/Gain3'
-
-  1.0,
-
-  // Expression: 1
-  //  Referenced by: '<S57>/Gain4'
-
-  1.0,
-
-  // Expression: 0.5
-  //  Referenced by: '<S57>/Gain'
-
-  0.5,
-
-  // Expression: 1
-  //  Referenced by: '<S74>/Constant'
-
-  1.0,
-
-  // Expression: 0.5
-  //  Referenced by: '<S73>/Constant1'
-
-  0.5,
-
-  // Expression: [0 1]
-  //  Referenced by: '<S73>/Constant2'
+  //  Referenced by: '<S69>/Constant2'
 
   { 0.0, 1.0 },
 
@@ -659,12 +624,12 @@ P_multiModeQuad_ROS_T multiModeQuad_ROS_P = {
   1.0,
 
   // Expression: 1
-  //  Referenced by: '<S58>/Gain2'
+  //  Referenced by: '<S58>/Gain3'
 
   1.0,
 
   // Expression: 1
-  //  Referenced by: '<S58>/Gain3'
+  //  Referenced by: '<S58>/Gain4'
 
   1.0,
 
@@ -674,82 +639,117 @@ P_multiModeQuad_ROS_T multiModeQuad_ROS_P = {
   0.5,
 
   // Expression: 1
-  //  Referenced by: '<S64>/Constant'
+  //  Referenced by: '<S75>/Constant'
 
   1.0,
 
   // Expression: 0.5
-  //  Referenced by: '<S63>/Constant1'
+  //  Referenced by: '<S74>/Constant1'
 
   0.5,
 
   // Expression: [0 1]
-  //  Referenced by: '<S63>/Constant2'
+  //  Referenced by: '<S74>/Constant2'
 
   { 0.0, 1.0 },
 
   // Expression: 1
-  //  Referenced by: '<S56>/Gain1'
+  //  Referenced by: '<S59>/Gain1'
 
   1.0,
 
   // Expression: 1
-  //  Referenced by: '<S56>/Gain2'
+  //  Referenced by: '<S59>/Gain2'
 
   1.0,
 
   // Expression: 1
-  //  Referenced by: '<S56>/Gain3'
+  //  Referenced by: '<S59>/Gain3'
 
   1.0,
 
   // Expression: 0.5
-  //  Referenced by: '<S56>/Gain'
+  //  Referenced by: '<S59>/Gain'
 
   0.5,
+
+  // Expression: 1
+  //  Referenced by: '<S65>/Constant'
+
+  1.0,
+
+  // Expression: 0.5
+  //  Referenced by: '<S64>/Constant1'
+
+  0.5,
+
+  // Expression: [0 1]
+  //  Referenced by: '<S64>/Constant2'
+
+  { 0.0, 1.0 },
+
+  // Expression: 1
+  //  Referenced by: '<S57>/Gain1'
+
+  1.0,
+
+  // Expression: 1
+  //  Referenced by: '<S57>/Gain2'
+
+  1.0,
+
+  // Expression: 1
+  //  Referenced by: '<S57>/Gain3'
+
+  1.0,
+
+  // Expression: 0.5
+  //  Referenced by: '<S57>/Gain'
+
+  0.5,
+
+  // Expression: 0
+  //  Referenced by: '<S81>/Constant1'
+
+  0.0,
 
   // Expression: 0
   //  Referenced by: '<S80>/Constant1'
 
   0.0,
 
-  // Expression: 0
-  //  Referenced by: '<S79>/Constant1'
-
-  0.0,
-
   // Expression: -eye(3)
-  //  Referenced by: '<S81>/Bias1'
+  //  Referenced by: '<S82>/Bias1'
 
   { -1.0, -0.0, -0.0, -0.0, -1.0, -0.0, -0.0, -0.0, -1.0 },
 
   // Expression: -1
-  //  Referenced by: '<S82>/Bias'
+  //  Referenced by: '<S83>/Bias'
 
   -1.0,
 
   // Expression: 0.5
-  //  Referenced by: '<S31>/1//2'
+  //  Referenced by: '<S32>/1//2'
 
   0.5,
 
   // Expression: zeros(3)
-  //  Referenced by: '<S36>/Constant2'
+  //  Referenced by: '<S37>/Constant2'
 
   { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 },
 
   // Expression: pi
-  //  Referenced by: '<S34>/phi theta psi'
+  //  Referenced by: '<S35>/phi theta psi'
 
   3.1415926535897931,
 
   // Expression: -pi
-  //  Referenced by: '<S34>/phi theta psi'
+  //  Referenced by: '<S35>/phi theta psi'
 
   -3.1415926535897931,
 
   // Expression: -1
-  //  Referenced by: '<S32>/Gain'
+  //  Referenced by: '<S33>/Gain'
 
   -1.0,
 
@@ -854,7 +854,7 @@ P_multiModeQuad_ROS_T multiModeQuad_ROS_P = {
   9.8,
 
   // Expression: -1
-  //  Referenced by: '<S33>/Gain'
+  //  Referenced by: '<S34>/Gain'
 
   -1.0,
 
@@ -864,34 +864,34 @@ P_multiModeQuad_ROS_T multiModeQuad_ROS_P = {
   { 1.0, 0.0, 0.0, 0.0 },
 
   // Computed Parameter: Filter_gainval
-  //  Referenced by: '<S356>/Filter'
+  //  Referenced by: '<S357>/Filter'
 
-  0.002,
+  0.005,
 
   // Computed Parameter: Integrator_gainval
-  //  Referenced by: '<S361>/Integrator'
+  //  Referenced by: '<S362>/Integrator'
 
-  0.002,
+  0.005,
 
   // Computed Parameter: Integrator_gainval_e
-  //  Referenced by: '<S313>/Integrator'
+  //  Referenced by: '<S314>/Integrator'
 
-  0.002,
+  0.005,
 
   // Computed Parameter: Filter_gainval_j
-  //  Referenced by: '<S308>/Filter'
+  //  Referenced by: '<S309>/Filter'
 
-  0.002,
+  0.005,
 
   // Computed Parameter: Integrator_gainval_a
-  //  Referenced by: '<S265>/Integrator'
+  //  Referenced by: '<S266>/Integrator'
 
-  0.002,
+  0.005,
 
   // Computed Parameter: Filter_gainval_c
-  //  Referenced by: '<S260>/Filter'
+  //  Referenced by: '<S261>/Filter'
 
-  0.002,
+  0.005,
 
   // Expression: 3.13
   //  Referenced by: '<S10>/Hover throttle'

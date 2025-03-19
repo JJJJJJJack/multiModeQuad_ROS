@@ -1,5 +1,5 @@
 // Copyright 2019-2021 The MathWorks, Inc.
-// Generated 19-Mar-2025 11:44:10
+// Generated 20-Mar-2025 00:46:31
 
 #ifdef _MSC_VER
 
@@ -118,7 +118,7 @@ namespace ros
     void NodeInterface::schedulerThread(void)
     {
       while (mRunModel) {
-        std::this_thread::sleep_for(std::chrono::nanoseconds(2000000));
+        std::this_thread::sleep_for(std::chrono::nanoseconds(5000000));
         mBaseRateSem.notify();
       }
     }

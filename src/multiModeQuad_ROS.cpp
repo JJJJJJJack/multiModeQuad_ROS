@@ -3,9 +3,9 @@
 //
 // Code generated for Simulink model 'multiModeQuad_ROS'.
 //
-// Model version                  : 1.67
+// Model version                  : 1.71
 // Simulink Coder version         : 9.6 (R2021b) 14-May-2021
-// C/C++ source code generated on : Wed Mar 19 11:44:06 2025
+// C/C++ source code generated on : Thu Mar 20 00:46:27 2025
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -4102,10 +4102,10 @@ void multiModeQuad_ROS_step(void)
   if (rtmIsMajorTimeStep(multiModeQuad_ROS_M)) {
     for (multiModeQuad_ROS_B.c_i = 0; multiModeQuad_ROS_B.c_i < 3;
          multiModeQuad_ROS_B.c_i++) {
-      // Concatenate: '<S36>/Vector Concatenate' incorporates:
-      //   Constant: '<S36>/Constant1'
-      //   Constant: '<S36>/Constant2'
-      //   Selector: '<S35>/Selector1'
+      // Concatenate: '<S37>/Vector Concatenate' incorporates:
+      //   Constant: '<S37>/Constant1'
+      //   Constant: '<S37>/Constant2'
+      //   Selector: '<S36>/Selector1'
 
       multiModeQuad_ROS_B.VectorConcatenate[6 * multiModeQuad_ROS_B.c_i] =
         multiModeQuad_ROS_P.uDOFEulerAngles2_inertia[3 * multiModeQuad_ROS_B.c_i];
@@ -4113,33 +4113,33 @@ void multiModeQuad_ROS_step(void)
       multiModeQuad_ROS_B.VectorConcatenate[multiModeQuad_ROS_B.c_j] =
         multiModeQuad_ROS_P.Constant2_Value_n[3 * multiModeQuad_ROS_B.c_i];
 
-      // Selector: '<S35>/Selector' incorporates:
-      //   Concatenate: '<S36>/Vector Concatenate'
-      //   Selector: '<S35>/Selector2'
+      // Selector: '<S36>/Selector' incorporates:
+      //   Concatenate: '<S37>/Vector Concatenate'
+      //   Selector: '<S36>/Selector2'
 
       multiModeQuad_ROS_B.Selector_tmp = multiModeQuad_ROS_B.VectorConcatenate[6
         * multiModeQuad_ROS_B.c_i];
 
-      // Selector: '<S35>/Selector'
+      // Selector: '<S36>/Selector'
       multiModeQuad_ROS_B.Selector[3 * multiModeQuad_ROS_B.c_i] =
         multiModeQuad_ROS_B.Selector_tmp;
 
-      // Selector: '<S35>/Selector1' incorporates:
-      //   Concatenate: '<S36>/Vector Concatenate'
+      // Selector: '<S36>/Selector1' incorporates:
+      //   Concatenate: '<S37>/Vector Concatenate'
 
       multiModeQuad_ROS_B.Selector1[3 * multiModeQuad_ROS_B.c_i] =
         multiModeQuad_ROS_B.VectorConcatenate[multiModeQuad_ROS_B.c_j];
 
-      // Selector: '<S35>/Selector2'
+      // Selector: '<S36>/Selector2'
       multiModeQuad_ROS_B.Selector2[3 * multiModeQuad_ROS_B.c_i] =
         multiModeQuad_ROS_B.Selector_tmp;
 
-      // Concatenate: '<S36>/Vector Concatenate' incorporates:
-      //   Constant: '<S36>/Constant1'
-      //   Constant: '<S36>/Constant2'
-      //   Selector: '<S35>/Selector'
-      //   Selector: '<S35>/Selector1'
-      //   Selector: '<S35>/Selector2'
+      // Concatenate: '<S37>/Vector Concatenate' incorporates:
+      //   Constant: '<S37>/Constant1'
+      //   Constant: '<S37>/Constant2'
+      //   Selector: '<S36>/Selector'
+      //   Selector: '<S36>/Selector1'
+      //   Selector: '<S36>/Selector2'
 
       multiModeQuad_ROS_B.c_j = 3 * multiModeQuad_ROS_B.c_i + 1;
       multiModeQuad_ROS_B.sgn = 6 * multiModeQuad_ROS_B.c_i + 1;
@@ -4150,33 +4150,33 @@ void multiModeQuad_ROS_step(void)
       multiModeQuad_ROS_B.VectorConcatenate[multiModeQuad_ROS_B.rtb_VectorConcatenate_tmp]
         = multiModeQuad_ROS_P.Constant2_Value_n[multiModeQuad_ROS_B.c_j];
 
-      // Selector: '<S35>/Selector' incorporates:
-      //   Concatenate: '<S36>/Vector Concatenate'
-      //   Selector: '<S35>/Selector2'
+      // Selector: '<S36>/Selector' incorporates:
+      //   Concatenate: '<S37>/Vector Concatenate'
+      //   Selector: '<S36>/Selector2'
 
       multiModeQuad_ROS_B.Selector_tmp =
         multiModeQuad_ROS_B.VectorConcatenate[multiModeQuad_ROS_B.sgn];
 
-      // Selector: '<S35>/Selector'
+      // Selector: '<S36>/Selector'
       multiModeQuad_ROS_B.Selector[multiModeQuad_ROS_B.c_j] =
         multiModeQuad_ROS_B.Selector_tmp;
 
-      // Selector: '<S35>/Selector1' incorporates:
-      //   Concatenate: '<S36>/Vector Concatenate'
+      // Selector: '<S36>/Selector1' incorporates:
+      //   Concatenate: '<S37>/Vector Concatenate'
 
       multiModeQuad_ROS_B.Selector1[multiModeQuad_ROS_B.c_j] =
         multiModeQuad_ROS_B.VectorConcatenate[multiModeQuad_ROS_B.rtb_VectorConcatenate_tmp];
 
-      // Selector: '<S35>/Selector2'
+      // Selector: '<S36>/Selector2'
       multiModeQuad_ROS_B.Selector2[multiModeQuad_ROS_B.c_j] =
         multiModeQuad_ROS_B.Selector_tmp;
 
-      // Concatenate: '<S36>/Vector Concatenate' incorporates:
-      //   Constant: '<S36>/Constant1'
-      //   Constant: '<S36>/Constant2'
-      //   Selector: '<S35>/Selector'
-      //   Selector: '<S35>/Selector1'
-      //   Selector: '<S35>/Selector2'
+      // Concatenate: '<S37>/Vector Concatenate' incorporates:
+      //   Constant: '<S37>/Constant1'
+      //   Constant: '<S37>/Constant2'
+      //   Selector: '<S36>/Selector'
+      //   Selector: '<S36>/Selector1'
+      //   Selector: '<S36>/Selector2'
 
       multiModeQuad_ROS_B.c_j = 3 * multiModeQuad_ROS_B.c_i + 2;
       multiModeQuad_ROS_B.sgn = 6 * multiModeQuad_ROS_B.c_i + 2;
@@ -4187,74 +4187,74 @@ void multiModeQuad_ROS_step(void)
       multiModeQuad_ROS_B.VectorConcatenate[multiModeQuad_ROS_B.rtb_VectorConcatenate_tmp]
         = multiModeQuad_ROS_P.Constant2_Value_n[multiModeQuad_ROS_B.c_j];
 
-      // Selector: '<S35>/Selector' incorporates:
-      //   Concatenate: '<S36>/Vector Concatenate'
-      //   Selector: '<S35>/Selector2'
+      // Selector: '<S36>/Selector' incorporates:
+      //   Concatenate: '<S37>/Vector Concatenate'
+      //   Selector: '<S36>/Selector2'
 
       multiModeQuad_ROS_B.Selector_tmp =
         multiModeQuad_ROS_B.VectorConcatenate[multiModeQuad_ROS_B.sgn];
 
-      // Selector: '<S35>/Selector'
+      // Selector: '<S36>/Selector'
       multiModeQuad_ROS_B.Selector[multiModeQuad_ROS_B.c_j] =
         multiModeQuad_ROS_B.Selector_tmp;
 
-      // Selector: '<S35>/Selector1' incorporates:
-      //   Concatenate: '<S36>/Vector Concatenate'
+      // Selector: '<S36>/Selector1' incorporates:
+      //   Concatenate: '<S37>/Vector Concatenate'
 
       multiModeQuad_ROS_B.Selector1[multiModeQuad_ROS_B.c_j] =
         multiModeQuad_ROS_B.VectorConcatenate[multiModeQuad_ROS_B.rtb_VectorConcatenate_tmp];
 
-      // Selector: '<S35>/Selector2'
+      // Selector: '<S36>/Selector2'
       multiModeQuad_ROS_B.Selector2[multiModeQuad_ROS_B.c_j] =
         multiModeQuad_ROS_B.Selector_tmp;
     }
   }
 
-  // Integrator: '<S34>/phi theta psi'
+  // Integrator: '<S35>/phi theta psi'
   multiModeQuad_ROS_B.sincos_o1_l[0] = multiModeQuad_ROS_X.phithetapsi_CSTATE[0];
 
-  // Trigonometry: '<S42>/sincos' incorporates:
-  //   Integrator: '<S34>/phi theta psi'
-  //   SignalConversion generated from: '<S42>/sincos'
+  // Trigonometry: '<S43>/sincos' incorporates:
+  //   Integrator: '<S35>/phi theta psi'
+  //   SignalConversion generated from: '<S43>/sincos'
 
   multiModeQuad_ROS_B.rtb_Sum2_idx_0 = cos
     (multiModeQuad_ROS_X.phithetapsi_CSTATE[2]);
   multiModeQuad_ROS_B.rtb_Switch_idx_0 = sin
     (multiModeQuad_ROS_X.phithetapsi_CSTATE[2]);
 
-  // Integrator: '<S34>/phi theta psi'
+  // Integrator: '<S35>/phi theta psi'
   multiModeQuad_ROS_B.sincos_o1_l[1] = multiModeQuad_ROS_X.phithetapsi_CSTATE[1];
 
-  // Trigonometry: '<S42>/sincos' incorporates:
-  //   Integrator: '<S34>/phi theta psi'
-  //   SignalConversion generated from: '<S42>/sincos'
+  // Trigonometry: '<S43>/sincos' incorporates:
+  //   Integrator: '<S35>/phi theta psi'
+  //   SignalConversion generated from: '<S43>/sincos'
 
   multiModeQuad_ROS_B.rtb_Sum2_idx_1 = cos
     (multiModeQuad_ROS_X.phithetapsi_CSTATE[1]);
   multiModeQuad_ROS_B.Selector_tmp = sin(multiModeQuad_ROS_X.phithetapsi_CSTATE
     [1]);
 
-  // Integrator: '<S34>/phi theta psi'
+  // Integrator: '<S35>/phi theta psi'
   multiModeQuad_ROS_B.sincos_o1_l[2] = multiModeQuad_ROS_X.phithetapsi_CSTATE[2];
 
-  // Trigonometry: '<S42>/sincos' incorporates:
-  //   Integrator: '<S34>/phi theta psi'
-  //   SignalConversion generated from: '<S42>/sincos'
+  // Trigonometry: '<S43>/sincos' incorporates:
+  //   Integrator: '<S35>/phi theta psi'
+  //   SignalConversion generated from: '<S43>/sincos'
 
   multiModeQuad_ROS_B.rtb_Sum2_idx_2 = cos
     (multiModeQuad_ROS_X.phithetapsi_CSTATE[0]);
   multiModeQuad_ROS_B.rtb_Switch_idx_1 = sin
     (multiModeQuad_ROS_X.phithetapsi_CSTATE[0]);
 
-  // Fcn: '<S42>/Fcn11' incorporates:
-  //   Concatenate: '<S44>/Vector Concatenate'
+  // Fcn: '<S43>/Fcn11' incorporates:
+  //   Concatenate: '<S45>/Vector Concatenate'
 
   multiModeQuad_ROS_B.VectorConcatenate_m[0] =
     multiModeQuad_ROS_B.rtb_Sum2_idx_0 * multiModeQuad_ROS_B.rtb_Sum2_idx_1;
 
-  // Fcn: '<S42>/Fcn21' incorporates:
-  //   Concatenate: '<S44>/Vector Concatenate'
-  //   Fcn: '<S42>/Fcn22'
+  // Fcn: '<S43>/Fcn21' incorporates:
+  //   Concatenate: '<S45>/Vector Concatenate'
+  //   Fcn: '<S43>/Fcn22'
 
   multiModeQuad_ROS_B.rtb_sincos_o2_idx_0 = multiModeQuad_ROS_B.Selector_tmp *
     multiModeQuad_ROS_B.rtb_Switch_idx_1;
@@ -4262,9 +4262,9 @@ void multiModeQuad_ROS_step(void)
     multiModeQuad_ROS_B.rtb_sincos_o2_idx_0 * multiModeQuad_ROS_B.rtb_Sum2_idx_0
     - multiModeQuad_ROS_B.rtb_Switch_idx_0 * multiModeQuad_ROS_B.rtb_Sum2_idx_2;
 
-  // Fcn: '<S42>/Fcn31' incorporates:
-  //   Concatenate: '<S44>/Vector Concatenate'
-  //   Fcn: '<S42>/Fcn32'
+  // Fcn: '<S43>/Fcn31' incorporates:
+  //   Concatenate: '<S45>/Vector Concatenate'
+  //   Fcn: '<S43>/Fcn32'
 
   multiModeQuad_ROS_B.rtb_Switch_idx_3 = multiModeQuad_ROS_B.Selector_tmp *
     multiModeQuad_ROS_B.rtb_Sum2_idx_2;
@@ -4272,40 +4272,40 @@ void multiModeQuad_ROS_step(void)
     multiModeQuad_ROS_B.rtb_Switch_idx_3 * multiModeQuad_ROS_B.rtb_Sum2_idx_0 +
     multiModeQuad_ROS_B.rtb_Switch_idx_0 * multiModeQuad_ROS_B.rtb_Switch_idx_1;
 
-  // Fcn: '<S42>/Fcn12' incorporates:
-  //   Concatenate: '<S44>/Vector Concatenate'
+  // Fcn: '<S43>/Fcn12' incorporates:
+  //   Concatenate: '<S45>/Vector Concatenate'
 
   multiModeQuad_ROS_B.VectorConcatenate_m[3] =
     multiModeQuad_ROS_B.rtb_Switch_idx_0 * multiModeQuad_ROS_B.rtb_Sum2_idx_1;
 
-  // Fcn: '<S42>/Fcn22' incorporates:
-  //   Concatenate: '<S44>/Vector Concatenate'
+  // Fcn: '<S43>/Fcn22' incorporates:
+  //   Concatenate: '<S45>/Vector Concatenate'
 
   multiModeQuad_ROS_B.VectorConcatenate_m[4] =
     multiModeQuad_ROS_B.rtb_sincos_o2_idx_0 *
     multiModeQuad_ROS_B.rtb_Switch_idx_0 + multiModeQuad_ROS_B.rtb_Sum2_idx_0 *
     multiModeQuad_ROS_B.rtb_Sum2_idx_2;
 
-  // Fcn: '<S42>/Fcn32' incorporates:
-  //   Concatenate: '<S44>/Vector Concatenate'
+  // Fcn: '<S43>/Fcn32' incorporates:
+  //   Concatenate: '<S45>/Vector Concatenate'
 
   multiModeQuad_ROS_B.VectorConcatenate_m[5] =
     multiModeQuad_ROS_B.rtb_Switch_idx_3 * multiModeQuad_ROS_B.rtb_Switch_idx_0
     - multiModeQuad_ROS_B.rtb_Sum2_idx_0 * multiModeQuad_ROS_B.rtb_Switch_idx_1;
 
-  // Fcn: '<S42>/Fcn13' incorporates:
-  //   Concatenate: '<S44>/Vector Concatenate'
+  // Fcn: '<S43>/Fcn13' incorporates:
+  //   Concatenate: '<S45>/Vector Concatenate'
 
   multiModeQuad_ROS_B.VectorConcatenate_m[6] = -multiModeQuad_ROS_B.Selector_tmp;
 
-  // Fcn: '<S42>/Fcn23' incorporates:
-  //   Concatenate: '<S44>/Vector Concatenate'
+  // Fcn: '<S43>/Fcn23' incorporates:
+  //   Concatenate: '<S45>/Vector Concatenate'
 
   multiModeQuad_ROS_B.VectorConcatenate_m[7] =
     multiModeQuad_ROS_B.rtb_Sum2_idx_1 * multiModeQuad_ROS_B.rtb_Switch_idx_1;
 
-  // Fcn: '<S42>/Fcn33' incorporates:
-  //   Concatenate: '<S44>/Vector Concatenate'
+  // Fcn: '<S43>/Fcn33' incorporates:
+  //   Concatenate: '<S45>/Vector Concatenate'
 
   multiModeQuad_ROS_B.VectorConcatenate_m[8] =
     multiModeQuad_ROS_B.rtb_Sum2_idx_1 * multiModeQuad_ROS_B.rtb_Sum2_idx_2;
@@ -4364,16 +4364,16 @@ void multiModeQuad_ROS_step(void)
     // End of Outputs for SubSystem: '<Root>/Sub setpoint velocity'
   }
 
-  // Outputs for IfAction SubSystem: '<S54>/If Warning//Error' incorporates:
-  //   ActionPort: '<S78>/if'
+  // Outputs for IfAction SubSystem: '<S55>/If Warning//Error' incorporates:
+  //   ActionPort: '<S79>/if'
 
   for (multiModeQuad_ROS_B.c_i = 0; multiModeQuad_ROS_B.c_i < 3;
        multiModeQuad_ROS_B.c_i++) {
-    // If: '<S54>/If1' incorporates:
-    //   Concatenate: '<S44>/Vector Concatenate'
+    // If: '<S55>/If1' incorporates:
+    //   Concatenate: '<S45>/Vector Concatenate'
     //   MATLAB Function: '<S10>/Attitude control'
     //   Math: '<S18>/Transpose'
-    //   Math: '<S81>/Math Function'
+    //   Math: '<S82>/Math Function'
 
     multiModeQuad_ROS_B.Product_tmp[3 * multiModeQuad_ROS_B.c_i] =
       multiModeQuad_ROS_B.VectorConcatenate_m[multiModeQuad_ROS_B.c_i];
@@ -4383,10 +4383,10 @@ void multiModeQuad_ROS_step(void)
       multiModeQuad_ROS_B.VectorConcatenate_m[multiModeQuad_ROS_B.c_i + 6];
   }
 
-  // End of Outputs for SubSystem: '<S54>/If Warning//Error'
+  // End of Outputs for SubSystem: '<S55>/If Warning//Error'
   for (multiModeQuad_ROS_B.c_i = 0; multiModeQuad_ROS_B.c_i < 3;
        multiModeQuad_ROS_B.c_i++) {
-    // Product: '<S41>/Product' incorporates:
+    // Product: '<S42>/Product' incorporates:
     //   Integrator: '<S18>/ub,vb,wb'
     //   Math: '<S18>/Transpose'
 
@@ -4403,7 +4403,7 @@ void multiModeQuad_ROS_step(void)
   }
 
   // Sum: '<S10>/Sum2' incorporates:
-  //   Gain: '<S32>/Gain'
+  //   Gain: '<S33>/Gain'
 
   multiModeQuad_ROS_B.rtb_Sum2_idx_0 = multiModeQuad_ROS_B.In1_h.Linear.X -
     multiModeQuad_ROS_B.Product[0];
@@ -4412,32 +4412,32 @@ void multiModeQuad_ROS_step(void)
   multiModeQuad_ROS_B.rtb_Sum2_idx_2 = multiModeQuad_ROS_B.In1_h.Linear.Z -
     multiModeQuad_ROS_P.Gain_Gain_ip * multiModeQuad_ROS_B.Product[2];
 
-  // Gain: '<S124>/Filter Coefficient' incorporates:
-  //   Gain: '<S115>/Derivative Gain'
-  //   Integrator: '<S116>/Filter'
-  //   Sum: '<S116>/SumD'
+  // Gain: '<S125>/Filter Coefficient' incorporates:
+  //   Gain: '<S116>/Derivative Gain'
+  //   Integrator: '<S117>/Filter'
+  //   Sum: '<S117>/SumD'
 
   multiModeQuad_ROS_B.FilterCoefficient = (multiModeQuad_ROS_P.PIDVelocityx_D *
     multiModeQuad_ROS_B.rtb_Sum2_idx_0 - multiModeQuad_ROS_X.Filter_CSTATE) *
     multiModeQuad_ROS_P.PIDVelocityx_N;
 
-  // Gain: '<S172>/Filter Coefficient' incorporates:
-  //   Gain: '<S163>/Derivative Gain'
-  //   Integrator: '<S164>/Filter'
-  //   Sum: '<S164>/SumD'
+  // Gain: '<S173>/Filter Coefficient' incorporates:
+  //   Gain: '<S164>/Derivative Gain'
+  //   Integrator: '<S165>/Filter'
+  //   Sum: '<S165>/SumD'
 
   multiModeQuad_ROS_B.FilterCoefficient_m = (multiModeQuad_ROS_P.PIDVelocityy_D *
     multiModeQuad_ROS_B.rtb_Sum2_idx_1 - multiModeQuad_ROS_X.Filter_CSTATE_k) *
     multiModeQuad_ROS_P.PIDVelocityy_N;
 
-  // SignalConversion generated from: '<S30>/ SFunction ' incorporates:
-  //   Gain: '<S126>/Proportional Gain'
-  //   Gain: '<S174>/Proportional Gain'
-  //   Integrator: '<S121>/Integrator'
-  //   Integrator: '<S169>/Integrator'
+  // SignalConversion generated from: '<S31>/ SFunction ' incorporates:
+  //   Gain: '<S127>/Proportional Gain'
+  //   Gain: '<S175>/Proportional Gain'
+  //   Integrator: '<S122>/Integrator'
+  //   Integrator: '<S170>/Integrator'
   //   MATLAB Function: '<S10>/R_EW1'
-  //   Sum: '<S130>/Sum'
-  //   Sum: '<S178>/Sum'
+  //   Sum: '<S131>/Sum'
+  //   Sum: '<S179>/Sum'
 
   multiModeQuad_ROS_B.ubvbwb[0] = (multiModeQuad_ROS_P.PIDVelocityx_P *
     multiModeQuad_ROS_B.rtb_Sum2_idx_0 + multiModeQuad_ROS_X.Integrator_CSTATE)
@@ -4447,8 +4447,8 @@ void multiModeQuad_ROS_step(void)
     + multiModeQuad_ROS_B.FilterCoefficient_m;
 
   // MATLAB Function: '<S10>/R_EW1' incorporates:
-  //   Concatenate: '<S44>/Vector Concatenate'
-  //   SignalConversion generated from: '<S30>/ SFunction '
+  //   Concatenate: '<S45>/Vector Concatenate'
+  //   SignalConversion generated from: '<S31>/ SFunction '
 
   for (multiModeQuad_ROS_B.c_i = 0; multiModeQuad_ROS_B.c_i < 3;
        multiModeQuad_ROS_B.c_i++) {
@@ -4462,11 +4462,11 @@ void multiModeQuad_ROS_step(void)
   }
 
   // Switch: '<S10>/Switch' incorporates:
-  //   Fcn: '<S31>/q0'
-  //   Fcn: '<S31>/q1'
-  //   Fcn: '<S31>/q2'
-  //   Fcn: '<S31>/q3'
-  //   Trigonometry: '<S31>/sincos'
+  //   Fcn: '<S32>/q0'
+  //   Fcn: '<S32>/q1'
+  //   Fcn: '<S32>/q2'
+  //   Fcn: '<S32>/q3'
+  //   Trigonometry: '<S32>/sincos'
 
   if (multiModeQuad_ROS_B.In1_e.Data >= multiModeQuad_ROS_P.Switch_Threshold) {
     multiModeQuad_ROS_B.rtb_Switch_idx_0 =
@@ -4478,49 +4478,49 @@ void multiModeQuad_ROS_step(void)
     multiModeQuad_ROS_B.rtb_Switch_idx_3 =
       multiModeQuad_ROS_B.In1.Pose.Orientation.Z;
   } else {
-    // Gain: '<S31>/1//2' incorporates:
+    // Gain: '<S32>/1//2' incorporates:
     //   MATLAB Function: '<S10>/R_EW1'
 
     multiModeQuad_ROS_B.K12 = multiModeQuad_ROS_P.u2_Gain *
       multiModeQuad_ROS_B.att_sp_Body_temp[1];
 
-    // Trigonometry: '<S31>/sincos'
+    // Trigonometry: '<S32>/sincos'
     multiModeQuad_ROS_B.rtb_Switch_idx_3 = sin(multiModeQuad_ROS_B.K12);
     multiModeQuad_ROS_B.rtb_sincos_o2_idx_0 = cos(multiModeQuad_ROS_B.K12);
 
-    // Fcn: '<S31>/q0'
+    // Fcn: '<S32>/q0'
     multiModeQuad_ROS_B.rtb_Switch_idx_0 = multiModeQuad_ROS_B.rtb_Switch_idx_3;
     multiModeQuad_ROS_B.sincos_o1[0] = multiModeQuad_ROS_B.rtb_Switch_idx_3;
 
-    // Gain: '<S31>/1//2' incorporates:
+    // Gain: '<S32>/1//2' incorporates:
     //   MATLAB Function: '<S10>/R_EW1'
-    //   Trigonometry: '<S31>/sincos'
+    //   Trigonometry: '<S32>/sincos'
 
     multiModeQuad_ROS_B.K12 = multiModeQuad_ROS_P.u2_Gain *
       -multiModeQuad_ROS_B.att_sp_Body_temp[0];
 
-    // Trigonometry: '<S31>/sincos'
+    // Trigonometry: '<S32>/sincos'
     multiModeQuad_ROS_B.rtb_Switch_idx_3 = sin(multiModeQuad_ROS_B.K12);
     multiModeQuad_ROS_B.K12_f = cos(multiModeQuad_ROS_B.K12);
 
-    // Fcn: '<S31>/q0'
+    // Fcn: '<S32>/q0'
     multiModeQuad_ROS_B.rtb_Switch_idx_1 = multiModeQuad_ROS_B.rtb_Switch_idx_3;
     multiModeQuad_ROS_B.sincos_o1[1] = multiModeQuad_ROS_B.rtb_Switch_idx_3;
 
-    // Gain: '<S31>/1//2' incorporates:
+    // Gain: '<S32>/1//2' incorporates:
     //   MATLAB Function: '<S10>/R_EW1'
-    //   SignalConversion generated from: '<S30>/ SFunction '
-    //   Trigonometry: '<S31>/sincos'
+    //   SignalConversion generated from: '<S31>/ SFunction '
+    //   Trigonometry: '<S32>/sincos'
 
     multiModeQuad_ROS_B.K12 = multiModeQuad_ROS_P.u2_Gain *
       multiModeQuad_ROS_B.In1_h.Angular.Z;
 
-    // Trigonometry: '<S31>/sincos'
+    // Trigonometry: '<S32>/sincos'
     multiModeQuad_ROS_B.rtb_Switch_idx_3 = sin(multiModeQuad_ROS_B.K12);
     multiModeQuad_ROS_B.K12 = cos(multiModeQuad_ROS_B.K12);
 
-    // Fcn: '<S31>/q0' incorporates:
-    //   Fcn: '<S31>/q1'
+    // Fcn: '<S32>/q0' incorporates:
+    //   Fcn: '<S32>/q1'
 
     multiModeQuad_ROS_B.K14 = multiModeQuad_ROS_B.rtb_sincos_o2_idx_0 *
       multiModeQuad_ROS_B.K12_f;
@@ -4532,10 +4532,10 @@ void multiModeQuad_ROS_step(void)
       multiModeQuad_ROS_B.rtb_Switch_idx_3 - multiModeQuad_ROS_B.sincos_o1[0] *
       multiModeQuad_ROS_B.sincos_o1[1] * multiModeQuad_ROS_B.K12;
 
-    // Fcn: '<S31>/q2' incorporates:
-    //   Fcn: '<S31>/q0'
-    //   Fcn: '<S31>/q1'
-    //   Fcn: '<S31>/q3'
+    // Fcn: '<S32>/q2' incorporates:
+    //   Fcn: '<S32>/q0'
+    //   Fcn: '<S32>/q1'
+    //   Fcn: '<S32>/q3'
 
     multiModeQuad_ROS_B.K12_f *= multiModeQuad_ROS_B.sincos_o1[0];
     multiModeQuad_ROS_B.K14 = multiModeQuad_ROS_B.sincos_o1[1] *
@@ -5077,9 +5077,9 @@ void multiModeQuad_ROS_step(void)
       multiModeQuad_ROS_B.att_sp_Body[multiModeQuad_ROS_B.c_i] -
       multiModeQuad_ROS_X.pqr_CSTATE[multiModeQuad_ROS_B.c_i];
 
-    // Product: '<S46>/Product' incorporates:
+    // Product: '<S47>/Product' incorporates:
     //   Integrator: '<S18>/p,q,r '
-    //   Selector: '<S35>/Selector'
+    //   Selector: '<S36>/Selector'
     //   Sum: '<Root>/Sum'
 
     multiModeQuad_ROS_B.att_sp_Body[multiModeQuad_ROS_B.c_i] =
@@ -5090,9 +5090,9 @@ void multiModeQuad_ROS_step(void)
       multiModeQuad_ROS_B.Selector[multiModeQuad_ROS_B.c_i + 6] *
       multiModeQuad_ROS_X.pqr_CSTATE[2];
 
-    // Product: '<S47>/Product' incorporates:
+    // Product: '<S48>/Product' incorporates:
     //   Integrator: '<S18>/p,q,r '
-    //   Selector: '<S35>/Selector1'
+    //   Selector: '<S36>/Selector1'
 
     multiModeQuad_ROS_B.att_sp_Body_temp[multiModeQuad_ROS_B.c_i] =
       (multiModeQuad_ROS_B.Selector1[multiModeQuad_ROS_B.c_i + 3] *
@@ -5103,17 +5103,17 @@ void multiModeQuad_ROS_step(void)
       multiModeQuad_ROS_X.pqr_CSTATE[2];
   }
 
-  // Sum: '<S35>/Sum2' incorporates:
+  // Sum: '<S36>/Sum2' incorporates:
   //   Integrator: '<S18>/p,q,r '
   //   MATLAB Function: '<S10>/Mapping'
-  //   Product: '<S47>/Product'
-  //   Product: '<S48>/i x j'
-  //   Product: '<S48>/j x k'
-  //   Product: '<S48>/k x i'
-  //   Product: '<S49>/i x k'
-  //   Product: '<S49>/j x i'
-  //   Product: '<S49>/k x j'
-  //   Sum: '<S45>/Sum'
+  //   Product: '<S48>/Product'
+  //   Product: '<S49>/i x j'
+  //   Product: '<S49>/j x k'
+  //   Product: '<S49>/k x i'
+  //   Product: '<S50>/i x k'
+  //   Product: '<S50>/j x i'
+  //   Product: '<S50>/k x j'
+  //   Sum: '<S46>/Sum'
 
   multiModeQuad_ROS_B.rtb_Saturation2_p[0] =
     ((((multiModeQuad_ROS_B.rtb_Switch_idx_3 +
@@ -5140,8 +5140,8 @@ void multiModeQuad_ROS_step(void)
     [0] * multiModeQuad_ROS_B.att_sp_Body[1] - multiModeQuad_ROS_B.att_sp_Body[0]
     * multiModeQuad_ROS_X.pqr_CSTATE[1]);
 
-  // Product: '<S35>/Product2' incorporates:
-  //   Selector: '<S35>/Selector2'
+  // Product: '<S36>/Product2' incorporates:
+  //   Selector: '<S36>/Selector2'
 
   rt_mrdivide_U1d1x3_U2d_9vOrDY_i(multiModeQuad_ROS_B.rtb_Saturation2_p,
     multiModeQuad_ROS_B.Selector2, multiModeQuad_ROS_B.Product2);
@@ -5158,15 +5158,15 @@ void multiModeQuad_ROS_step(void)
       multiModeQuad_ROS_P.Mass_Value;
   }
 
-  // Sum: '<S37>/Sum' incorporates:
+  // Sum: '<S38>/Sum' incorporates:
   //   Integrator: '<S18>/p,q,r '
   //   Integrator: '<S18>/ub,vb,wb'
-  //   Product: '<S50>/i x j'
-  //   Product: '<S50>/j x k'
-  //   Product: '<S50>/k x i'
-  //   Product: '<S51>/i x k'
-  //   Product: '<S51>/j x i'
-  //   Product: '<S51>/k x j'
+  //   Product: '<S51>/i x j'
+  //   Product: '<S51>/j x k'
+  //   Product: '<S51>/k x i'
+  //   Product: '<S52>/i x k'
+  //   Product: '<S52>/j x i'
+  //   Product: '<S52>/k x j'
 
   multiModeQuad_ROS_B.ubvbwb[0] = multiModeQuad_ROS_X.ubvbwb_CSTATE[1] *
     multiModeQuad_ROS_X.pqr_CSTATE[2] - multiModeQuad_ROS_X.pqr_CSTATE[1] *
@@ -5190,13 +5190,13 @@ void multiModeQuad_ROS_step(void)
       multiModeQuad_ROS_B.rtb_Switch_idx_0);
   for (multiModeQuad_ROS_B.c_i = 0; multiModeQuad_ROS_B.c_i < 3;
        multiModeQuad_ROS_B.c_i++) {
-    // Trigonometry: '<S43>/sincos'
+    // Trigonometry: '<S44>/sincos'
     multiModeQuad_ROS_B.rtb_Switch_idx_1 =
       multiModeQuad_ROS_B.sincos_o1_l[multiModeQuad_ROS_B.c_i];
 
     // Sum: '<S18>/Sum' incorporates:
-    //   Concatenate: '<S44>/Vector Concatenate'
-    //   Constant: '<S36>/Constant'
+    //   Concatenate: '<S45>/Vector Concatenate'
+    //   Constant: '<S37>/Constant'
     //   Product: '<S18>/Product'
     //   Product: '<S21>/Product'
     //   Reshape: '<S21>/Reshape'
@@ -5213,7 +5213,7 @@ void multiModeQuad_ROS_step(void)
       multiModeQuad_ROS_P.uDOFEulerAngles2_mass_0 +
       multiModeQuad_ROS_B.ubvbwb[multiModeQuad_ROS_B.c_i];
 
-    // Trigonometry: '<S43>/sincos'
+    // Trigonometry: '<S44>/sincos'
     multiModeQuad_ROS_B.sincos_o1_l[multiModeQuad_ROS_B.c_i] = sin
       (multiModeQuad_ROS_B.rtb_Switch_idx_1);
     multiModeQuad_ROS_B.ubvbwb[multiModeQuad_ROS_B.c_i] = cos
@@ -5232,8 +5232,8 @@ void multiModeQuad_ROS_step(void)
   ParamGet_multiModeQuad_ROS_461.get_parameter
     (&multiModeQuad_ROS_B.rtb_sincos_o2_idx_0);
 
-  // Fcn: '<S43>/phidot' incorporates:
-  //   Fcn: '<S43>/psidot'
+  // Fcn: '<S44>/phidot' incorporates:
+  //   Fcn: '<S44>/psidot'
   //   Integrator: '<S18>/p,q,r '
 
   multiModeQuad_ROS_B.K12 = multiModeQuad_ROS_B.sincos_o1_l[0] *
@@ -5241,23 +5241,23 @@ void multiModeQuad_ROS_step(void)
     multiModeQuad_ROS_X.pqr_CSTATE[2];
 
   // Saturate: '<S10>/Saturation7' incorporates:
-  //   Fcn: '<S43>/phidot'
+  //   Fcn: '<S44>/phidot'
   //   Integrator: '<S18>/p,q,r '
 
   multiModeQuad_ROS_B.rtb_Switch_idx_3 = multiModeQuad_ROS_B.sincos_o1_l[1] /
     multiModeQuad_ROS_B.ubvbwb[1] * multiModeQuad_ROS_B.K12 +
     multiModeQuad_ROS_X.pqr_CSTATE[0];
 
-  // Integrator: '<S212>/Filter' incorporates:
-  //   Fcn: '<S43>/thetadot'
+  // Integrator: '<S213>/Filter' incorporates:
+  //   Fcn: '<S44>/thetadot'
   //   Integrator: '<S18>/p,q,r '
 
   multiModeQuad_ROS_B.K12_f = multiModeQuad_ROS_B.ubvbwb[0] *
     multiModeQuad_ROS_X.pqr_CSTATE[1] - multiModeQuad_ROS_B.sincos_o1_l[0] *
     multiModeQuad_ROS_X.pqr_CSTATE[2];
 
-  // SignalConversion generated from: '<S34>/phi theta psi' incorporates:
-  //   Fcn: '<S43>/psidot'
+  // SignalConversion generated from: '<S35>/phi theta psi' incorporates:
+  //   Fcn: '<S44>/psidot'
 
   multiModeQuad_ROS_B.TmpSignalConversionAtphithetaps[0] =
     multiModeQuad_ROS_B.rtb_Switch_idx_3;
@@ -5266,13 +5266,13 @@ void multiModeQuad_ROS_step(void)
   multiModeQuad_ROS_B.TmpSignalConversionAtphithetaps[2] =
     multiModeQuad_ROS_B.K12 / multiModeQuad_ROS_B.ubvbwb[1];
 
-  // Sum: '<S55>/Add'
+  // Sum: '<S56>/Add'
   multiModeQuad_ROS_B.K12 = (multiModeQuad_ROS_B.VectorConcatenate_m[0] +
     multiModeQuad_ROS_B.VectorConcatenate_m[4]) +
     multiModeQuad_ROS_B.VectorConcatenate_m[8];
 
   // If: '<S20>/If' incorporates:
-  //   Sum: '<S55>/Add'
+  //   Sum: '<S56>/Add'
 
   if (rtmIsMajorTimeStep(multiModeQuad_ROS_M)) {
     multiModeQuad_ROS_DW.If_ActiveSubsystem = static_cast<int8_T>
@@ -5282,31 +5282,31 @@ void multiModeQuad_ROS_step(void)
   switch (multiModeQuad_ROS_DW.If_ActiveSubsystem) {
    case 0:
     // Outputs for IfAction SubSystem: '<S20>/Positive Trace' incorporates:
-    //   ActionPort: '<S53>/Action Port'
+    //   ActionPort: '<S54>/Action Port'
 
-    // Sqrt: '<S53>/sqrt' incorporates:
-    //   Constant: '<S53>/Constant'
-    //   Sum: '<S53>/Sum'
-    //   Sum: '<S55>/Add'
+    // Sqrt: '<S54>/sqrt' incorporates:
+    //   Constant: '<S54>/Constant'
+    //   Sum: '<S54>/Sum'
+    //   Sum: '<S56>/Add'
 
     multiModeQuad_ROS_B.rtb_Switch_idx_3 = sqrt(multiModeQuad_ROS_B.K12 +
       multiModeQuad_ROS_P.Constant_Value_o);
 
-    // Gain: '<S53>/Gain' incorporates:
+    // Gain: '<S54>/Gain' incorporates:
     //   Merge: '<S20>/Merge'
 
     multiModeQuad_ROS_B.Merge[0] = multiModeQuad_ROS_P.Gain_Gain *
       multiModeQuad_ROS_B.rtb_Switch_idx_3;
 
-    // Gain: '<S53>/Gain1'
+    // Gain: '<S54>/Gain1'
     multiModeQuad_ROS_B.rtb_Switch_idx_3 *= multiModeQuad_ROS_P.Gain1_Gain;
 
-    // Product: '<S53>/Product' incorporates:
-    //   Fcn: '<S42>/Fcn13'
+    // Product: '<S54>/Product' incorporates:
+    //   Fcn: '<S43>/Fcn13'
     //   Merge: '<S20>/Merge'
-    //   Sum: '<S75>/Add'
     //   Sum: '<S76>/Add'
     //   Sum: '<S77>/Add'
+    //   Sum: '<S78>/Add'
 
     multiModeQuad_ROS_B.Merge[1] = (multiModeQuad_ROS_B.VectorConcatenate_m[7] -
       multiModeQuad_ROS_B.VectorConcatenate_m[5]) /
@@ -5323,9 +5323,9 @@ void multiModeQuad_ROS_step(void)
 
    case 1:
     // Outputs for IfAction SubSystem: '<S20>/Negative Trace' incorporates:
-    //   ActionPort: '<S52>/Action Port'
+    //   ActionPort: '<S53>/Action Port'
 
-    // If: '<S52>/Find Maximum Diagonal Value'
+    // If: '<S53>/Find Maximum Diagonal Value'
     if (rtmIsMajorTimeStep(multiModeQuad_ROS_M)) {
       if ((multiModeQuad_ROS_B.VectorConcatenate_m[4] >
            multiModeQuad_ROS_B.VectorConcatenate_m[0]) &&
@@ -5342,12 +5342,12 @@ void multiModeQuad_ROS_step(void)
 
     switch (multiModeQuad_ROS_DW.FindMaximumDiagonalValue_Active) {
      case 0:
-      // Outputs for IfAction SubSystem: '<S52>/Maximum Value at DCM(2,2)' incorporates:
-      //   ActionPort: '<S57>/Action Port'
+      // Outputs for IfAction SubSystem: '<S53>/Maximum Value at DCM(2,2)' incorporates:
+      //   ActionPort: '<S58>/Action Port'
 
-      // Sqrt: '<S57>/sqrt' incorporates:
-      //   Constant: '<S69>/Constant'
-      //   Sum: '<S69>/Add'
+      // Sqrt: '<S58>/sqrt' incorporates:
+      //   Constant: '<S70>/Constant'
+      //   Sum: '<S70>/Add'
 
       multiModeQuad_ROS_B.K12_f = sqrt
         (((multiModeQuad_ROS_B.VectorConcatenate_m[4] -
@@ -5355,9 +5355,9 @@ void multiModeQuad_ROS_step(void)
           multiModeQuad_ROS_B.VectorConcatenate_m[8]) +
          multiModeQuad_ROS_P.Constant_Value_n);
 
-      // Switch: '<S68>/Switch' incorporates:
-      //   Constant: '<S68>/Constant1'
-      //   Constant: '<S68>/Constant2'
+      // Switch: '<S69>/Switch' incorporates:
+      //   Constant: '<S69>/Constant1'
+      //   Constant: '<S69>/Constant2'
 
       if (multiModeQuad_ROS_B.K12_f != 0.0) {
         multiModeQuad_ROS_B.rtb_Switch_idx_3 =
@@ -5369,55 +5369,55 @@ void multiModeQuad_ROS_step(void)
         multiModeQuad_ROS_B.K12 = multiModeQuad_ROS_P.Constant2_Value[1];
       }
 
-      // End of Switch: '<S68>/Switch'
+      // End of Switch: '<S69>/Switch'
 
-      // Product: '<S68>/Product'
+      // Product: '<S69>/Product'
       multiModeQuad_ROS_B.rtb_Switch_idx_3 /= multiModeQuad_ROS_B.K12;
 
-      // Gain: '<S57>/Gain1' incorporates:
+      // Gain: '<S58>/Gain1' incorporates:
       //   Merge: '<S20>/Merge'
-      //   Product: '<S57>/Product'
-      //   Sum: '<S67>/Add'
+      //   Product: '<S58>/Product'
+      //   Sum: '<S68>/Add'
 
       multiModeQuad_ROS_B.Merge[1] = (multiModeQuad_ROS_B.VectorConcatenate_m[1]
         + multiModeQuad_ROS_B.VectorConcatenate_m[3]) *
         multiModeQuad_ROS_B.rtb_Switch_idx_3 * multiModeQuad_ROS_P.Gain1_Gain_k;
 
-      // Gain: '<S57>/Gain3' incorporates:
+      // Gain: '<S58>/Gain3' incorporates:
       //   Merge: '<S20>/Merge'
-      //   Product: '<S57>/Product'
-      //   Sum: '<S66>/Add'
+      //   Product: '<S58>/Product'
+      //   Sum: '<S67>/Add'
 
       multiModeQuad_ROS_B.Merge[3] = (multiModeQuad_ROS_B.VectorConcatenate_m[5]
         + multiModeQuad_ROS_B.VectorConcatenate_m[7]) *
         multiModeQuad_ROS_B.rtb_Switch_idx_3 * multiModeQuad_ROS_P.Gain3_Gain;
 
-      // Gain: '<S57>/Gain4' incorporates:
-      //   Fcn: '<S42>/Fcn13'
+      // Gain: '<S58>/Gain4' incorporates:
+      //   Fcn: '<S43>/Fcn13'
       //   Merge: '<S20>/Merge'
-      //   Product: '<S57>/Product'
-      //   Sum: '<S65>/Add'
+      //   Product: '<S58>/Product'
+      //   Sum: '<S66>/Add'
 
       multiModeQuad_ROS_B.Merge[0] = (multiModeQuad_ROS_B.VectorConcatenate_m[2]
         - (-multiModeQuad_ROS_B.Selector_tmp)) *
         multiModeQuad_ROS_B.rtb_Switch_idx_3 * multiModeQuad_ROS_P.Gain4_Gain;
 
-      // Gain: '<S57>/Gain' incorporates:
+      // Gain: '<S58>/Gain' incorporates:
       //   Merge: '<S20>/Merge'
 
       multiModeQuad_ROS_B.Merge[2] = multiModeQuad_ROS_P.Gain_Gain_g *
         multiModeQuad_ROS_B.K12_f;
 
-      // End of Outputs for SubSystem: '<S52>/Maximum Value at DCM(2,2)'
+      // End of Outputs for SubSystem: '<S53>/Maximum Value at DCM(2,2)'
       break;
 
      case 1:
-      // Outputs for IfAction SubSystem: '<S52>/Maximum Value at DCM(3,3)' incorporates:
-      //   ActionPort: '<S58>/Action Port'
+      // Outputs for IfAction SubSystem: '<S53>/Maximum Value at DCM(3,3)' incorporates:
+      //   ActionPort: '<S59>/Action Port'
 
-      // Sqrt: '<S58>/sqrt' incorporates:
-      //   Constant: '<S74>/Constant'
-      //   Sum: '<S74>/Add'
+      // Sqrt: '<S59>/sqrt' incorporates:
+      //   Constant: '<S75>/Constant'
+      //   Sum: '<S75>/Add'
 
       multiModeQuad_ROS_B.K12_f = sqrt
         (((multiModeQuad_ROS_B.VectorConcatenate_m[8] -
@@ -5425,9 +5425,9 @@ void multiModeQuad_ROS_step(void)
           multiModeQuad_ROS_B.VectorConcatenate_m[4]) +
          multiModeQuad_ROS_P.Constant_Value_pu);
 
-      // Switch: '<S73>/Switch' incorporates:
-      //   Constant: '<S73>/Constant1'
-      //   Constant: '<S73>/Constant2'
+      // Switch: '<S74>/Switch' incorporates:
+      //   Constant: '<S74>/Constant1'
+      //   Constant: '<S74>/Constant2'
 
       if (multiModeQuad_ROS_B.K12_f != 0.0) {
         multiModeQuad_ROS_B.rtb_Switch_idx_3 =
@@ -5439,55 +5439,55 @@ void multiModeQuad_ROS_step(void)
         multiModeQuad_ROS_B.K12 = multiModeQuad_ROS_P.Constant2_Value_k[1];
       }
 
-      // End of Switch: '<S73>/Switch'
+      // End of Switch: '<S74>/Switch'
 
-      // Product: '<S73>/Product'
+      // Product: '<S74>/Product'
       multiModeQuad_ROS_B.rtb_Switch_idx_3 /= multiModeQuad_ROS_B.K12;
 
-      // Gain: '<S58>/Gain1' incorporates:
-      //   Fcn: '<S42>/Fcn13'
+      // Gain: '<S59>/Gain1' incorporates:
+      //   Fcn: '<S43>/Fcn13'
       //   Merge: '<S20>/Merge'
-      //   Product: '<S58>/Product'
-      //   Sum: '<S70>/Add'
+      //   Product: '<S59>/Product'
+      //   Sum: '<S71>/Add'
 
       multiModeQuad_ROS_B.Merge[1] = (multiModeQuad_ROS_B.VectorConcatenate_m[2]
         + -multiModeQuad_ROS_B.Selector_tmp) *
         multiModeQuad_ROS_B.rtb_Switch_idx_3 * multiModeQuad_ROS_P.Gain1_Gain_l;
 
-      // Gain: '<S58>/Gain2' incorporates:
+      // Gain: '<S59>/Gain2' incorporates:
       //   Merge: '<S20>/Merge'
-      //   Product: '<S58>/Product'
-      //   Sum: '<S71>/Add'
+      //   Product: '<S59>/Product'
+      //   Sum: '<S72>/Add'
 
       multiModeQuad_ROS_B.Merge[2] = (multiModeQuad_ROS_B.VectorConcatenate_m[5]
         + multiModeQuad_ROS_B.VectorConcatenate_m[7]) *
         multiModeQuad_ROS_B.rtb_Switch_idx_3 * multiModeQuad_ROS_P.Gain2_Gain;
 
-      // Gain: '<S58>/Gain3' incorporates:
+      // Gain: '<S59>/Gain3' incorporates:
       //   Merge: '<S20>/Merge'
-      //   Product: '<S58>/Product'
-      //   Sum: '<S72>/Add'
+      //   Product: '<S59>/Product'
+      //   Sum: '<S73>/Add'
 
       multiModeQuad_ROS_B.Merge[0] = (multiModeQuad_ROS_B.VectorConcatenate_m[3]
         - multiModeQuad_ROS_B.VectorConcatenate_m[1]) *
         multiModeQuad_ROS_B.rtb_Switch_idx_3 * multiModeQuad_ROS_P.Gain3_Gain_a;
 
-      // Gain: '<S58>/Gain' incorporates:
+      // Gain: '<S59>/Gain' incorporates:
       //   Merge: '<S20>/Merge'
 
       multiModeQuad_ROS_B.Merge[3] = multiModeQuad_ROS_P.Gain_Gain_d *
         multiModeQuad_ROS_B.K12_f;
 
-      // End of Outputs for SubSystem: '<S52>/Maximum Value at DCM(3,3)'
+      // End of Outputs for SubSystem: '<S53>/Maximum Value at DCM(3,3)'
       break;
 
      case 2:
-      // Outputs for IfAction SubSystem: '<S52>/Maximum Value at DCM(1,1)' incorporates:
-      //   ActionPort: '<S56>/Action Port'
+      // Outputs for IfAction SubSystem: '<S53>/Maximum Value at DCM(1,1)' incorporates:
+      //   ActionPort: '<S57>/Action Port'
 
-      // Sqrt: '<S56>/sqrt' incorporates:
-      //   Constant: '<S64>/Constant'
-      //   Sum: '<S64>/Add'
+      // Sqrt: '<S57>/sqrt' incorporates:
+      //   Constant: '<S65>/Constant'
+      //   Sum: '<S65>/Add'
 
       multiModeQuad_ROS_B.K12_f = sqrt
         (((multiModeQuad_ROS_B.VectorConcatenate_m[0] -
@@ -5495,9 +5495,9 @@ void multiModeQuad_ROS_step(void)
           multiModeQuad_ROS_B.VectorConcatenate_m[8]) +
          multiModeQuad_ROS_P.Constant_Value_fv);
 
-      // Switch: '<S63>/Switch' incorporates:
-      //   Constant: '<S63>/Constant1'
-      //   Constant: '<S63>/Constant2'
+      // Switch: '<S64>/Switch' incorporates:
+      //   Constant: '<S64>/Constant1'
+      //   Constant: '<S64>/Constant2'
 
       if (multiModeQuad_ROS_B.K12_f != 0.0) {
         multiModeQuad_ROS_B.rtb_Switch_idx_3 =
@@ -5509,50 +5509,50 @@ void multiModeQuad_ROS_step(void)
         multiModeQuad_ROS_B.K12 = multiModeQuad_ROS_P.Constant2_Value_o[1];
       }
 
-      // End of Switch: '<S63>/Switch'
+      // End of Switch: '<S64>/Switch'
 
-      // Product: '<S63>/Product'
+      // Product: '<S64>/Product'
       multiModeQuad_ROS_B.rtb_Switch_idx_3 /= multiModeQuad_ROS_B.K12;
 
-      // Gain: '<S56>/Gain1' incorporates:
+      // Gain: '<S57>/Gain1' incorporates:
       //   Merge: '<S20>/Merge'
-      //   Product: '<S56>/Product'
-      //   Sum: '<S62>/Add'
+      //   Product: '<S57>/Product'
+      //   Sum: '<S63>/Add'
 
       multiModeQuad_ROS_B.Merge[2] = (multiModeQuad_ROS_B.VectorConcatenate_m[1]
         + multiModeQuad_ROS_B.VectorConcatenate_m[3]) *
         multiModeQuad_ROS_B.rtb_Switch_idx_3 * multiModeQuad_ROS_P.Gain1_Gain_b;
 
-      // Gain: '<S56>/Gain2' incorporates:
-      //   Fcn: '<S42>/Fcn13'
+      // Gain: '<S57>/Gain2' incorporates:
+      //   Fcn: '<S43>/Fcn13'
       //   Merge: '<S20>/Merge'
-      //   Product: '<S56>/Product'
-      //   Sum: '<S60>/Add'
+      //   Product: '<S57>/Product'
+      //   Sum: '<S61>/Add'
 
       multiModeQuad_ROS_B.Merge[3] = (multiModeQuad_ROS_B.VectorConcatenate_m[2]
         + -multiModeQuad_ROS_B.Selector_tmp) *
         multiModeQuad_ROS_B.rtb_Switch_idx_3 * multiModeQuad_ROS_P.Gain2_Gain_d;
 
-      // Gain: '<S56>/Gain3' incorporates:
+      // Gain: '<S57>/Gain3' incorporates:
       //   Merge: '<S20>/Merge'
-      //   Product: '<S56>/Product'
-      //   Sum: '<S61>/Add'
+      //   Product: '<S57>/Product'
+      //   Sum: '<S62>/Add'
 
       multiModeQuad_ROS_B.Merge[0] = (multiModeQuad_ROS_B.VectorConcatenate_m[7]
         - multiModeQuad_ROS_B.VectorConcatenate_m[5]) *
         multiModeQuad_ROS_B.rtb_Switch_idx_3 * multiModeQuad_ROS_P.Gain3_Gain_az;
 
-      // Gain: '<S56>/Gain' incorporates:
+      // Gain: '<S57>/Gain' incorporates:
       //   Merge: '<S20>/Merge'
 
       multiModeQuad_ROS_B.Merge[1] = multiModeQuad_ROS_P.Gain_Gain_i *
         multiModeQuad_ROS_B.K12_f;
 
-      // End of Outputs for SubSystem: '<S52>/Maximum Value at DCM(1,1)'
+      // End of Outputs for SubSystem: '<S53>/Maximum Value at DCM(1,1)'
       break;
     }
 
-    // End of If: '<S52>/Find Maximum Diagonal Value'
+    // End of If: '<S53>/Find Maximum Diagonal Value'
     // End of Outputs for SubSystem: '<S20>/Negative Trace'
     break;
   }
@@ -5567,7 +5567,7 @@ void multiModeQuad_ROS_step(void)
 
   // BusAssignment: '<Root>/Bus Assignment' incorporates:
   //   Constant: '<S1>/Constant'
-  //   Gain: '<S33>/Gain'
+  //   Gain: '<S34>/Gain'
   //   Integrator: '<S18>/xe,ye,ze'
   //   MATLABSystem: '<Root>/Get Parameter'
   //   MATLABSystem: '<Root>/Get Parameter1'
@@ -5639,57 +5639,57 @@ void multiModeQuad_ROS_step(void)
 
   // End of Outputs for SubSystem: '<Root>/Publish1'
   if (rtmIsMajorTimeStep(multiModeQuad_ROS_M)) {
-    // Gain: '<S364>/Filter Coefficient' incorporates:
-    //   DiscreteIntegrator: '<S356>/Filter'
-    //   Gain: '<S355>/Derivative Gain'
-    //   Sum: '<S356>/SumD'
+    // Gain: '<S365>/Filter Coefficient' incorporates:
+    //   DiscreteIntegrator: '<S357>/Filter'
+    //   Gain: '<S356>/Derivative Gain'
+    //   Sum: '<S357>/SumD'
 
     multiModeQuad_ROS_B.FilterCoefficient_g =
       (multiModeQuad_ROS_P.PIDangularroll_D * multiModeQuad_ROS_B.sincos_o1[0] -
        multiModeQuad_ROS_DW.Filter_DSTATE) *
       multiModeQuad_ROS_P.PIDangularroll_N;
 
-    // Gain: '<S359>/Proportional Gain' incorporates:
-    //   DiscreteIntegrator: '<S361>/Integrator'
-    //   Sum: '<S370>/Sum'
+    // Gain: '<S360>/Proportional Gain' incorporates:
+    //   DiscreteIntegrator: '<S362>/Integrator'
+    //   Sum: '<S371>/Sum'
 
     multiModeQuad_ROS_B.ProportionalGain = ((multiModeQuad_ROS_B.sincos_o1[0] +
       multiModeQuad_ROS_DW.Integrator_DSTATE) +
       multiModeQuad_ROS_B.FilterCoefficient_g) *
       multiModeQuad_ROS_P.PIDangularroll_P;
 
-    // Gain: '<S316>/Filter Coefficient' incorporates:
-    //   DiscreteIntegrator: '<S308>/Filter'
-    //   Gain: '<S307>/Derivative Gain'
-    //   Sum: '<S308>/SumD'
+    // Gain: '<S317>/Filter Coefficient' incorporates:
+    //   DiscreteIntegrator: '<S309>/Filter'
+    //   Gain: '<S308>/Derivative Gain'
+    //   Sum: '<S309>/SumD'
 
     multiModeQuad_ROS_B.FilterCoefficient_a =
       (multiModeQuad_ROS_P.PIDangularpitch_D * multiModeQuad_ROS_B.sincos_o1[1]
        - multiModeQuad_ROS_DW.Filter_DSTATE_a) *
       multiModeQuad_ROS_P.PIDangularpitch_N;
 
-    // Gain: '<S311>/Proportional Gain' incorporates:
-    //   DiscreteIntegrator: '<S313>/Integrator'
-    //   Sum: '<S322>/Sum'
+    // Gain: '<S312>/Proportional Gain' incorporates:
+    //   DiscreteIntegrator: '<S314>/Integrator'
+    //   Sum: '<S323>/Sum'
 
     multiModeQuad_ROS_B.ProportionalGain_o = ((multiModeQuad_ROS_B.sincos_o1[1]
       + multiModeQuad_ROS_DW.Integrator_DSTATE_f) +
       multiModeQuad_ROS_B.FilterCoefficient_a) *
       multiModeQuad_ROS_P.PIDangularpitch_P;
 
-    // Gain: '<S268>/Filter Coefficient' incorporates:
-    //   DiscreteIntegrator: '<S260>/Filter'
-    //   Gain: '<S259>/Derivative Gain'
-    //   Sum: '<S260>/SumD'
+    // Gain: '<S269>/Filter Coefficient' incorporates:
+    //   DiscreteIntegrator: '<S261>/Filter'
+    //   Gain: '<S260>/Derivative Gain'
+    //   Sum: '<S261>/SumD'
 
     multiModeQuad_ROS_B.FilterCoefficient_i =
       (multiModeQuad_ROS_P.PIDangulayaw_D * multiModeQuad_ROS_B.sincos_o1[2] -
        multiModeQuad_ROS_DW.Filter_DSTATE_c) *
       multiModeQuad_ROS_P.PIDangulayaw_N;
 
-    // Gain: '<S263>/Proportional Gain' incorporates:
-    //   DiscreteIntegrator: '<S265>/Integrator'
-    //   Sum: '<S274>/Sum'
+    // Gain: '<S264>/Proportional Gain' incorporates:
+    //   DiscreteIntegrator: '<S266>/Integrator'
+    //   Sum: '<S275>/Sum'
 
     multiModeQuad_ROS_B.ProportionalGain_l = ((multiModeQuad_ROS_B.sincos_o1[2]
       + multiModeQuad_ROS_DW.Integrator_DSTATE_l) +
@@ -5719,10 +5719,10 @@ void multiModeQuad_ROS_step(void)
       multiModeQuad_ROS_B.In1_ol.Data;
   }
 
-  // Gain: '<S220>/Filter Coefficient' incorporates:
-  //   Gain: '<S211>/Derivative Gain'
-  //   Integrator: '<S212>/Filter'
-  //   Sum: '<S212>/SumD'
+  // Gain: '<S221>/Filter Coefficient' incorporates:
+  //   Gain: '<S212>/Derivative Gain'
+  //   Integrator: '<S213>/Filter'
+  //   Sum: '<S213>/SumD'
 
   multiModeQuad_ROS_B.FilterCoefficient_j = (multiModeQuad_ROS_P.PIDVelocityz_D *
     multiModeQuad_ROS_B.rtb_Sum2_idx_2 - multiModeQuad_ROS_X.Filter_CSTATE_h) *
@@ -5730,10 +5730,10 @@ void multiModeQuad_ROS_step(void)
 
   // Switch: '<S10>/Switch2' incorporates:
   //   Constant: '<S10>/Hover throttle'
-  //   Gain: '<S222>/Proportional Gain'
-  //   Integrator: '<S217>/Integrator'
+  //   Gain: '<S223>/Proportional Gain'
+  //   Integrator: '<S218>/Integrator'
   //   Sum: '<S10>/Sum3'
-  //   Sum: '<S226>/Sum'
+  //   Sum: '<S227>/Sum'
 
   if (multiModeQuad_ROS_B.In1_e.Data >= multiModeQuad_ROS_P.Switch2_Threshold) {
     multiModeQuad_ROS_B.rtb_Switch_idx_1 = multiModeQuad_ROS_B.Gain;
@@ -5855,34 +5855,34 @@ void multiModeQuad_ROS_step(void)
   multiModeQuad_ROS_B.Komega3 = multiModeQuad_ROS_B.rtb_Switch_idx_3 *
     multiModeQuad_ROS_B.rtb_Switch_idx_3 * multiModeQuad_ROS_P.Komega3_Gain;
 
-  // Gain: '<S118>/Integral Gain'
+  // Gain: '<S119>/Integral Gain'
   multiModeQuad_ROS_B.IntegralGain = multiModeQuad_ROS_P.PIDVelocityx_I *
     multiModeQuad_ROS_B.rtb_Sum2_idx_0;
 
-  // Gain: '<S166>/Integral Gain'
+  // Gain: '<S167>/Integral Gain'
   multiModeQuad_ROS_B.IntegralGain_i = multiModeQuad_ROS_P.PIDVelocityy_I *
     multiModeQuad_ROS_B.rtb_Sum2_idx_1;
 
-  // Gain: '<S214>/Integral Gain'
+  // Gain: '<S215>/Integral Gain'
   multiModeQuad_ROS_B.IntegralGain_g = multiModeQuad_ROS_P.PIDVelocityz_I *
     multiModeQuad_ROS_B.rtb_Sum2_idx_2;
   if (rtmIsMajorTimeStep(multiModeQuad_ROS_M)) {
     int8_T rtAction;
 
-    // Gain: '<S262>/Integral Gain'
+    // Gain: '<S263>/Integral Gain'
     multiModeQuad_ROS_B.IntegralGain_g1 = multiModeQuad_ROS_P.PIDangulayaw_I *
       multiModeQuad_ROS_B.sincos_o1[2];
 
-    // Gain: '<S310>/Integral Gain'
+    // Gain: '<S311>/Integral Gain'
     multiModeQuad_ROS_B.IntegralGain_i_m = multiModeQuad_ROS_P.PIDangularpitch_I
       * multiModeQuad_ROS_B.sincos_o1[1];
 
-    // Gain: '<S358>/Integral Gain'
+    // Gain: '<S359>/Integral Gain'
     multiModeQuad_ROS_B.IntegralGain_j = multiModeQuad_ROS_P.PIDangularroll_I *
       multiModeQuad_ROS_B.sincos_o1[0];
 
-    // If: '<S54>/If1' incorporates:
-    //   Constant: '<S54>/Constant'
+    // If: '<S55>/If1' incorporates:
+    //   Constant: '<S55>/Constant'
 
     rtAction = -1;
     if (rtmIsMajorTimeStep(multiModeQuad_ROS_M)) {
@@ -5896,13 +5896,13 @@ void multiModeQuad_ROS_step(void)
     }
 
     if (rtAction == 0) {
-      // Outputs for IfAction SubSystem: '<S54>/If Warning//Error' incorporates:
-      //   ActionPort: '<S78>/if'
+      // Outputs for IfAction SubSystem: '<S55>/If Warning//Error' incorporates:
+      //   ActionPort: '<S79>/if'
 
-      // Bias: '<S81>/Bias1' incorporates:
-      //   Concatenate: '<S44>/Vector Concatenate'
-      //   Math: '<S81>/Math Function'
-      //   Product: '<S81>/Product'
+      // Bias: '<S82>/Bias1' incorporates:
+      //   Concatenate: '<S45>/Vector Concatenate'
+      //   Math: '<S82>/Math Function'
+      //   Product: '<S82>/Product'
 
       for (multiModeQuad_ROS_B.c_i = 0; multiModeQuad_ROS_B.c_i < 3;
            multiModeQuad_ROS_B.c_i++) {
@@ -5923,11 +5923,11 @@ void multiModeQuad_ROS_step(void)
         }
       }
 
-      // End of Bias: '<S81>/Bias1'
+      // End of Bias: '<S82>/Bias1'
 
-      // RelationalOperator: '<S87>/Compare' incorporates:
-      //   Abs: '<S81>/Abs2'
-      //   Constant: '<S87>/Constant'
+      // RelationalOperator: '<S88>/Compare' incorporates:
+      //   Abs: '<S82>/Abs2'
+      //   Constant: '<S88>/Constant'
 
       for (multiModeQuad_ROS_B.c_i = 0; multiModeQuad_ROS_B.c_i < 9;
            multiModeQuad_ROS_B.c_i++) {
@@ -5936,10 +5936,10 @@ void multiModeQuad_ROS_step(void)
           multiModeQuad_ROS_P.DirectionCosineMatrixtoQuater_h);
       }
 
-      // End of RelationalOperator: '<S87>/Compare'
+      // End of RelationalOperator: '<S88>/Compare'
 
-      // Logic: '<S81>/Logical Operator1' incorporates:
-      //   RelationalOperator: '<S87>/Compare'
+      // Logic: '<S82>/Logical Operator1' incorporates:
+      //   RelationalOperator: '<S88>/Compare'
 
       tmp = multiModeQuad_ROS_B.Compare[0];
       for (multiModeQuad_ROS_B.c_i = 0; multiModeQuad_ROS_B.c_i < 8;
@@ -5947,22 +5947,22 @@ void multiModeQuad_ROS_step(void)
         tmp = (tmp || multiModeQuad_ROS_B.Compare[multiModeQuad_ROS_B.c_i + 1]);
       }
 
-      // If: '<S78>/If' incorporates:
-      //   Abs: '<S82>/Abs1'
-      //   Bias: '<S82>/Bias'
-      //   Concatenate: '<S44>/Vector Concatenate'
-      //   Constant: '<S89>/Constant'
-      //   Fcn: '<S42>/Fcn13'
-      //   Logic: '<S81>/Logical Operator1'
-      //   Product: '<S88>/Product'
-      //   Product: '<S88>/Product1'
-      //   Product: '<S88>/Product2'
-      //   Product: '<S88>/Product3'
-      //   Product: '<S88>/Product4'
-      //   Product: '<S88>/Product5'
-      //   RelationalOperator: '<S89>/Compare'
-      //   Reshape: '<S88>/Reshape'
-      //   Sum: '<S88>/Sum'
+      // If: '<S79>/If' incorporates:
+      //   Abs: '<S83>/Abs1'
+      //   Bias: '<S83>/Bias'
+      //   Concatenate: '<S45>/Vector Concatenate'
+      //   Constant: '<S90>/Constant'
+      //   Fcn: '<S43>/Fcn13'
+      //   Logic: '<S82>/Logical Operator1'
+      //   Product: '<S89>/Product'
+      //   Product: '<S89>/Product1'
+      //   Product: '<S89>/Product2'
+      //   Product: '<S89>/Product3'
+      //   Product: '<S89>/Product4'
+      //   Product: '<S89>/Product5'
+      //   RelationalOperator: '<S90>/Compare'
+      //   Reshape: '<S89>/Reshape'
+      //   Sum: '<S89>/Sum'
 
       if (fabs((((((multiModeQuad_ROS_B.VectorConcatenate_m[0] *
                     multiModeQuad_ROS_B.VectorConcatenate_m[4] *
@@ -5984,7 +5984,38 @@ void multiModeQuad_ROS_step(void)
                 -multiModeQuad_ROS_B.Selector_tmp) +
                multiModeQuad_ROS_P.Bias_Bias) >
           multiModeQuad_ROS_P.DirectionCosineMatrixtoQuater_h) {
-        // Outputs for IfAction SubSystem: '<S78>/If Not Proper' incorporates:
+        // Outputs for IfAction SubSystem: '<S79>/If Not Proper' incorporates:
+        //   ActionPort: '<S81>/Action Port'
+
+        // If: '<S81>/If' incorporates:
+        //   Constant: '<S81>/Constant'
+
+        if (multiModeQuad_ROS_P.DirectionCosineMatrixtoQuaterni == 2.0) {
+          // Outputs for IfAction SubSystem: '<S81>/Warning' incorporates:
+          //   ActionPort: '<S87>/Action Port'
+
+          // Assertion: '<S87>/Assertion' incorporates:
+          //   Constant: '<S81>/Constant1'
+
+          utAssert(multiModeQuad_ROS_P.Constant1_Value_d != 0.0);
+
+          // End of Outputs for SubSystem: '<S81>/Warning'
+        } else if (multiModeQuad_ROS_P.DirectionCosineMatrixtoQuaterni == 3.0) {
+          // Outputs for IfAction SubSystem: '<S81>/Error' incorporates:
+          //   ActionPort: '<S86>/Action Port'
+
+          // Assertion: '<S86>/Assertion' incorporates:
+          //   Constant: '<S81>/Constant1'
+
+          utAssert(multiModeQuad_ROS_P.Constant1_Value_d != 0.0);
+
+          // End of Outputs for SubSystem: '<S81>/Error'
+        }
+
+        // End of If: '<S81>/If'
+        // End of Outputs for SubSystem: '<S79>/If Not Proper'
+      } else if (tmp) {
+        // Outputs for IfAction SubSystem: '<S79>/Else If Not Orthogonal' incorporates:
         //   ActionPort: '<S80>/Action Port'
 
         // If: '<S80>/If' incorporates:
@@ -5992,93 +6023,62 @@ void multiModeQuad_ROS_step(void)
 
         if (multiModeQuad_ROS_P.DirectionCosineMatrixtoQuaterni == 2.0) {
           // Outputs for IfAction SubSystem: '<S80>/Warning' incorporates:
-          //   ActionPort: '<S86>/Action Port'
-
-          // Assertion: '<S86>/Assertion' incorporates:
-          //   Constant: '<S80>/Constant1'
-
-          utAssert(multiModeQuad_ROS_P.Constant1_Value_d != 0.0);
-
-          // End of Outputs for SubSystem: '<S80>/Warning'
-        } else if (multiModeQuad_ROS_P.DirectionCosineMatrixtoQuaterni == 3.0) {
-          // Outputs for IfAction SubSystem: '<S80>/Error' incorporates:
           //   ActionPort: '<S85>/Action Port'
 
           // Assertion: '<S85>/Assertion' incorporates:
           //   Constant: '<S80>/Constant1'
 
-          utAssert(multiModeQuad_ROS_P.Constant1_Value_d != 0.0);
+          utAssert(multiModeQuad_ROS_P.Constant1_Value_j != 0.0);
+
+          // End of Outputs for SubSystem: '<S80>/Warning'
+        } else if (multiModeQuad_ROS_P.DirectionCosineMatrixtoQuaterni == 3.0) {
+          // Outputs for IfAction SubSystem: '<S80>/Error' incorporates:
+          //   ActionPort: '<S84>/Action Port'
+
+          // Assertion: '<S84>/Assertion' incorporates:
+          //   Constant: '<S80>/Constant1'
+
+          utAssert(multiModeQuad_ROS_P.Constant1_Value_j != 0.0);
 
           // End of Outputs for SubSystem: '<S80>/Error'
         }
 
         // End of If: '<S80>/If'
-        // End of Outputs for SubSystem: '<S78>/If Not Proper'
-      } else if (tmp) {
-        // Outputs for IfAction SubSystem: '<S78>/Else If Not Orthogonal' incorporates:
-        //   ActionPort: '<S79>/Action Port'
-
-        // If: '<S79>/If' incorporates:
-        //   Constant: '<S79>/Constant'
-
-        if (multiModeQuad_ROS_P.DirectionCosineMatrixtoQuaterni == 2.0) {
-          // Outputs for IfAction SubSystem: '<S79>/Warning' incorporates:
-          //   ActionPort: '<S84>/Action Port'
-
-          // Assertion: '<S84>/Assertion' incorporates:
-          //   Constant: '<S79>/Constant1'
-
-          utAssert(multiModeQuad_ROS_P.Constant1_Value_j != 0.0);
-
-          // End of Outputs for SubSystem: '<S79>/Warning'
-        } else if (multiModeQuad_ROS_P.DirectionCosineMatrixtoQuaterni == 3.0) {
-          // Outputs for IfAction SubSystem: '<S79>/Error' incorporates:
-          //   ActionPort: '<S83>/Action Port'
-
-          // Assertion: '<S83>/Assertion' incorporates:
-          //   Constant: '<S79>/Constant1'
-
-          utAssert(multiModeQuad_ROS_P.Constant1_Value_j != 0.0);
-
-          // End of Outputs for SubSystem: '<S79>/Error'
-        }
-
-        // End of If: '<S79>/If'
-        // End of Outputs for SubSystem: '<S78>/Else If Not Orthogonal'
+        // End of Outputs for SubSystem: '<S79>/Else If Not Orthogonal'
       }
 
-      // End of If: '<S78>/If'
-      // End of Outputs for SubSystem: '<S54>/If Warning//Error'
+      // End of If: '<S79>/If'
+      // End of Outputs for SubSystem: '<S55>/If Warning//Error'
     }
   }
 
   if (rtmIsMajorTimeStep(multiModeQuad_ROS_M)) {
     if (rtmIsMajorTimeStep(multiModeQuad_ROS_M)) {
-      // Update for DiscreteIntegrator: '<S356>/Filter'
+      // Update for DiscreteIntegrator: '<S357>/Filter'
       multiModeQuad_ROS_DW.Filter_DSTATE += multiModeQuad_ROS_P.Filter_gainval *
         multiModeQuad_ROS_B.FilterCoefficient_g;
 
-      // Update for DiscreteIntegrator: '<S361>/Integrator'
+      // Update for DiscreteIntegrator: '<S362>/Integrator'
       multiModeQuad_ROS_DW.Integrator_DSTATE +=
         multiModeQuad_ROS_P.Integrator_gainval *
         multiModeQuad_ROS_B.IntegralGain_j;
 
-      // Update for DiscreteIntegrator: '<S313>/Integrator'
+      // Update for DiscreteIntegrator: '<S314>/Integrator'
       multiModeQuad_ROS_DW.Integrator_DSTATE_f +=
         multiModeQuad_ROS_P.Integrator_gainval_e *
         multiModeQuad_ROS_B.IntegralGain_i_m;
 
-      // Update for DiscreteIntegrator: '<S308>/Filter'
+      // Update for DiscreteIntegrator: '<S309>/Filter'
       multiModeQuad_ROS_DW.Filter_DSTATE_a +=
         multiModeQuad_ROS_P.Filter_gainval_j *
         multiModeQuad_ROS_B.FilterCoefficient_a;
 
-      // Update for DiscreteIntegrator: '<S265>/Integrator'
+      // Update for DiscreteIntegrator: '<S266>/Integrator'
       multiModeQuad_ROS_DW.Integrator_DSTATE_l +=
         multiModeQuad_ROS_P.Integrator_gainval_a *
         multiModeQuad_ROS_B.IntegralGain_g1;
 
-      // Update for DiscreteIntegrator: '<S260>/Filter'
+      // Update for DiscreteIntegrator: '<S261>/Filter'
       multiModeQuad_ROS_DW.Filter_DSTATE_c +=
         multiModeQuad_ROS_P.Filter_gainval_c *
         multiModeQuad_ROS_B.FilterCoefficient_i;
@@ -6099,9 +6099,9 @@ void multiModeQuad_ROS_step(void)
       (&multiModeQuad_ROS_M->solverInfo);
 
     {
-      // Update absolute timer for sample time: [0.002s, 0.0s]
+      // Update absolute timer for sample time: [0.005s, 0.0s]
       // The "clockTick1" counts the number of times the code of this task has
-      //  been executed. The resolution of this integer timer is 0.002, which is the step size
+      //  been executed. The resolution of this integer timer is 0.005, which is the step size
       //  of the task. Size of "clockTick1" ensures timer will not overflow during the
       //  application lifespan selected.
 
@@ -6116,16 +6116,16 @@ void multiModeQuad_ROS_derivatives(void)
   XDot_multiModeQuad_ROS_T *_rtXdot;
   _rtXdot = ((XDot_multiModeQuad_ROS_T *) multiModeQuad_ROS_M->derivs);
 
-  // Derivatives for Integrator: '<S121>/Integrator'
+  // Derivatives for Integrator: '<S122>/Integrator'
   _rtXdot->Integrator_CSTATE = multiModeQuad_ROS_B.IntegralGain;
 
-  // Derivatives for Integrator: '<S116>/Filter'
+  // Derivatives for Integrator: '<S117>/Filter'
   _rtXdot->Filter_CSTATE = multiModeQuad_ROS_B.FilterCoefficient;
 
-  // Derivatives for Integrator: '<S169>/Integrator'
+  // Derivatives for Integrator: '<S170>/Integrator'
   _rtXdot->Integrator_CSTATE_o = multiModeQuad_ROS_B.IntegralGain_i;
 
-  // Derivatives for Integrator: '<S164>/Filter'
+  // Derivatives for Integrator: '<S165>/Filter'
   _rtXdot->Filter_CSTATE_k = multiModeQuad_ROS_B.FilterCoefficient_m;
 
   // Derivatives for TransferFcn: '<S10>/Transfer Fcn2'
@@ -6152,7 +6152,7 @@ void multiModeQuad_ROS_derivatives(void)
     multiModeQuad_ROS_X.TransferFcn4_CSTATE;
   _rtXdot->TransferFcn4_CSTATE += multiModeQuad_ROS_B.Komega3;
 
-  // Derivatives for Integrator: '<S34>/phi theta psi'
+  // Derivatives for Integrator: '<S35>/phi theta psi'
   _rtXdot->phithetapsi_CSTATE[0] =
     multiModeQuad_ROS_B.TmpSignalConversionAtphithetaps[0];
 
@@ -6165,7 +6165,7 @@ void multiModeQuad_ROS_derivatives(void)
   // Derivatives for Integrator: '<S18>/xe,ye,ze'
   _rtXdot->xeyeze_CSTATE[0] = multiModeQuad_ROS_B.Product[0];
 
-  // Derivatives for Integrator: '<S34>/phi theta psi'
+  // Derivatives for Integrator: '<S35>/phi theta psi'
   _rtXdot->phithetapsi_CSTATE[1] =
     multiModeQuad_ROS_B.TmpSignalConversionAtphithetaps[1];
 
@@ -6178,7 +6178,7 @@ void multiModeQuad_ROS_derivatives(void)
   // Derivatives for Integrator: '<S18>/xe,ye,ze'
   _rtXdot->xeyeze_CSTATE[1] = multiModeQuad_ROS_B.Product[1];
 
-  // Derivatives for Integrator: '<S34>/phi theta psi'
+  // Derivatives for Integrator: '<S35>/phi theta psi'
   _rtXdot->phithetapsi_CSTATE[2] =
     multiModeQuad_ROS_B.TmpSignalConversionAtphithetaps[2];
 
@@ -6191,10 +6191,10 @@ void multiModeQuad_ROS_derivatives(void)
   // Derivatives for Integrator: '<S18>/xe,ye,ze'
   _rtXdot->xeyeze_CSTATE[2] = multiModeQuad_ROS_B.Product[2];
 
-  // Derivatives for Integrator: '<S217>/Integrator'
+  // Derivatives for Integrator: '<S218>/Integrator'
   _rtXdot->Integrator_CSTATE_h = multiModeQuad_ROS_B.IntegralGain_g;
 
-  // Derivatives for Integrator: '<S212>/Filter'
+  // Derivatives for Integrator: '<S213>/Filter'
   _rtXdot->Filter_CSTATE_h = multiModeQuad_ROS_B.FilterCoefficient_j;
 }
 
@@ -6251,7 +6251,7 @@ void multiModeQuad_ROS_initialize(void)
                     (&multiModeQuad_ROS_M->intgData));
   rtsiSetSolverName(&multiModeQuad_ROS_M->solverInfo,"ode3");
   rtmSetTPtr(multiModeQuad_ROS_M, &multiModeQuad_ROS_M->Timing.tArray[0]);
-  multiModeQuad_ROS_M->Timing.stepSize0 = 0.002;
+  multiModeQuad_ROS_M->Timing.stepSize0 = 0.005;
 
   {
     int32_T i;
@@ -6291,22 +6291,22 @@ void multiModeQuad_ROS_initialize(void)
     // Start for If: '<S20>/If'
     multiModeQuad_ROS_DW.If_ActiveSubsystem = -1;
 
-    // Start for If: '<S54>/If1'
+    // Start for If: '<S55>/If1'
     multiModeQuad_ROS_DW.If1_ActiveSubsystem = -1;
 
-    // InitializeConditions for Integrator: '<S121>/Integrator'
+    // InitializeConditions for Integrator: '<S122>/Integrator'
     multiModeQuad_ROS_X.Integrator_CSTATE =
       multiModeQuad_ROS_P.PIDVelocityx_InitialCondition_o;
 
-    // InitializeConditions for Integrator: '<S116>/Filter'
+    // InitializeConditions for Integrator: '<S117>/Filter'
     multiModeQuad_ROS_X.Filter_CSTATE =
       multiModeQuad_ROS_P.PIDVelocityx_InitialConditionFo;
 
-    // InitializeConditions for Integrator: '<S169>/Integrator'
+    // InitializeConditions for Integrator: '<S170>/Integrator'
     multiModeQuad_ROS_X.Integrator_CSTATE_o =
       multiModeQuad_ROS_P.PIDVelocityy_InitialCondition_i;
 
-    // InitializeConditions for Integrator: '<S164>/Filter'
+    // InitializeConditions for Integrator: '<S165>/Filter'
     multiModeQuad_ROS_X.Filter_CSTATE_k =
       multiModeQuad_ROS_P.PIDVelocityy_InitialConditionFo;
 
@@ -6322,7 +6322,7 @@ void multiModeQuad_ROS_initialize(void)
     // InitializeConditions for TransferFcn: '<S10>/Transfer Fcn4'
     multiModeQuad_ROS_X.TransferFcn4_CSTATE = 0.0;
 
-    // InitializeConditions for Integrator: '<S34>/phi theta psi'
+    // InitializeConditions for Integrator: '<S35>/phi theta psi'
     multiModeQuad_ROS_X.phithetapsi_CSTATE[0] =
       multiModeQuad_ROS_P.uDOFEulerAngles2_eul_0[0];
 
@@ -6338,7 +6338,7 @@ void multiModeQuad_ROS_initialize(void)
     multiModeQuad_ROS_X.xeyeze_CSTATE[0] =
       multiModeQuad_ROS_P.uDOFEulerAngles2_xme_0[0];
 
-    // InitializeConditions for Integrator: '<S34>/phi theta psi'
+    // InitializeConditions for Integrator: '<S35>/phi theta psi'
     multiModeQuad_ROS_X.phithetapsi_CSTATE[1] =
       multiModeQuad_ROS_P.uDOFEulerAngles2_eul_0[1];
 
@@ -6354,7 +6354,7 @@ void multiModeQuad_ROS_initialize(void)
     multiModeQuad_ROS_X.xeyeze_CSTATE[1] =
       multiModeQuad_ROS_P.uDOFEulerAngles2_xme_0[1];
 
-    // InitializeConditions for Integrator: '<S34>/phi theta psi'
+    // InitializeConditions for Integrator: '<S35>/phi theta psi'
     multiModeQuad_ROS_X.phithetapsi_CSTATE[2] =
       multiModeQuad_ROS_P.uDOFEulerAngles2_eul_0[2];
 
@@ -6370,35 +6370,35 @@ void multiModeQuad_ROS_initialize(void)
     multiModeQuad_ROS_X.xeyeze_CSTATE[2] =
       multiModeQuad_ROS_P.uDOFEulerAngles2_xme_0[2];
 
-    // InitializeConditions for DiscreteIntegrator: '<S356>/Filter'
+    // InitializeConditions for DiscreteIntegrator: '<S357>/Filter'
     multiModeQuad_ROS_DW.Filter_DSTATE =
       multiModeQuad_ROS_P.PIDangularroll_InitialCondition;
 
-    // InitializeConditions for DiscreteIntegrator: '<S361>/Integrator'
+    // InitializeConditions for DiscreteIntegrator: '<S362>/Integrator'
     multiModeQuad_ROS_DW.Integrator_DSTATE =
       multiModeQuad_ROS_P.PIDangularroll_InitialConditi_o;
 
-    // InitializeConditions for DiscreteIntegrator: '<S313>/Integrator'
+    // InitializeConditions for DiscreteIntegrator: '<S314>/Integrator'
     multiModeQuad_ROS_DW.Integrator_DSTATE_f =
       multiModeQuad_ROS_P.PIDangularpitch_InitialCondit_b;
 
-    // InitializeConditions for DiscreteIntegrator: '<S308>/Filter'
+    // InitializeConditions for DiscreteIntegrator: '<S309>/Filter'
     multiModeQuad_ROS_DW.Filter_DSTATE_a =
       multiModeQuad_ROS_P.PIDangularpitch_InitialConditio;
 
-    // InitializeConditions for DiscreteIntegrator: '<S265>/Integrator'
+    // InitializeConditions for DiscreteIntegrator: '<S266>/Integrator'
     multiModeQuad_ROS_DW.Integrator_DSTATE_l =
       multiModeQuad_ROS_P.PIDangulayaw_InitialCondition_m;
 
-    // InitializeConditions for DiscreteIntegrator: '<S260>/Filter'
+    // InitializeConditions for DiscreteIntegrator: '<S261>/Filter'
     multiModeQuad_ROS_DW.Filter_DSTATE_c =
       multiModeQuad_ROS_P.PIDangulayaw_InitialConditionFo;
 
-    // InitializeConditions for Integrator: '<S217>/Integrator'
+    // InitializeConditions for Integrator: '<S218>/Integrator'
     multiModeQuad_ROS_X.Integrator_CSTATE_h =
       multiModeQuad_ROS_P.PIDVelocityz_InitialCondition_g;
 
-    // InitializeConditions for Integrator: '<S212>/Filter'
+    // InitializeConditions for Integrator: '<S213>/Filter'
     multiModeQuad_ROS_X.Filter_CSTATE_h =
       multiModeQuad_ROS_P.PIDVelocityz_InitialConditionFo;
 
@@ -6497,7 +6497,7 @@ void multiModeQuad_ROS_initialize(void)
     // End of SystemInitialize for SubSystem: '<Root>/Sub setpoint rate'
 
     // SystemInitialize for IfAction SubSystem: '<S20>/Negative Trace'
-    // Start for If: '<S52>/Find Maximum Diagonal Value'
+    // Start for If: '<S53>/Find Maximum Diagonal Value'
     multiModeQuad_ROS_DW.FindMaximumDiagonalValue_Active = -1;
 
     // End of SystemInitialize for SubSystem: '<S20>/Negative Trace'
